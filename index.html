@@ -1116,11 +1116,11 @@ box-sizing: border-box;
 
     <!-- Tombol kategori (tanpa tombol "Semua") -->
     <div class="gallery-categories">
-      <button class="category-btn" onclick="openGalleryModal('kegiatan')">Kegiatan Belajar</button>
-      <button class="category-btn" onclick="openGalleryModal('fasilitas')">Fasilitas Sekolah</button>
-      <button class="category-btn" onclick="openGalleryModal('prestasi')">Prestasi Siswa</button>
-      <button class="category-btn" onclick="openGalleryModal('acara')">Acara Wisuda</button>
-      <button class="category-btn" onclick="openGalleryModal('outdoor')">Outdoor</button>
+      <a href="images/gallery/kegiatan-belajar/" class="category-btn">Kegiatan Belajar</a>
+      <a href="images/gallery/fasilitas-sekolah/" class="category-btn">Fasilitas Sekolah</a>
+      <a href="images/gallery/prestasi-siswa/" class="category-btn">Prestasi Siswa</a>
+      <a href="images/gallery/acara-wisuda/" class="category-btn">Acara Wisuda</a>
+      <a href="images/gallery/outdoor/" class="category-btn">Outdoor</a>
       <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
     </div>
 
@@ -1132,54 +1132,54 @@ box-sizing: border-box;
     <!-- Grid thumbnail per kategori -->
     <div class="gallery-grid">
       <!-- Kegiatan Belajar -->
-      <div class="gallery-item" onclick="openGalleryModal('kegiatan')">
+      <a href="images/gallery/kegiatan-belajar/" class="gallery-item">
         <img src="images/gallery/kegiatan-belajar/kbm1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-images"></i>
           <h4>Kegiatan Belajar</h4>
           <p>15 Foto • Lihat Semua</p>
         </div>
-      </div>
+      </a>
 
       <!-- Fasilitas Sekolah -->
-      <div class="gallery-item" onclick="openGalleryModal('fasilitas')">
+      <a href="images/gallery/fasilitas-sekolah/" class="gallery-item">
         <img src="images/gallery/fasilitas-sekolah/mainan-dalam.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-building"></i>
           <h4>Fasilitas Sekolah</h4>
           <p>12 Foto • Lihat Semua</p>
         </div>
-      </div>
+      </a>
 
       <!-- Prestasi Siswa -->
-      <div class="gallery-item" onclick="openGalleryModal('prestasi')">
+      <a href="images/gallery/prestasi-siswa/" class="gallery-item">
         <img src="images/gallery/prestasi-siswa/Trofi.jpg" alt="Prestasi Siswa" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-trophy"></i>
           <h4>Prestasi Siswa</h4>
           <p>8 Foto • Lihat Semua</p>
         </div>
-      </div>
+      </a>
 
       <!-- Acara Wisuda -->
-      <div class="gallery-item" onclick="openGalleryModal('acara')">
+      <a href="images/gallery/acara-wisuda/" class="gallery-item">
         <img src="images/gallery/acara-wisuda/wisuda1.jpg" alt="Acara Wisuda" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-calendar-star"></i>
           <h4>Acara Wisuda</h4>
           <p>10 Foto • Lihat Semua</p>
         </div>
-      </div>
+      </a>
 
       <!-- Outdoor -->
-      <div class="gallery-item" onclick="openGalleryModal('outdoor')">
+      <a href="images/gallery/outdoor/" class="gallery-item">
         <img src="images/gallery/outdoor/kbmo1.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-tree"></i>
           <h4>Kegiatan Outdoor</h4>
           <p>9 Foto • Lihat Semua</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1294,40 +1294,303 @@ box-sizing: border-box;
                     <a href="#">Les Calistung SD Kelas 3-6</a>
                     <a href="#">Bimbingan Konseling</a>
                 </div>
-                </div>
+
                 <div class="footer-bottom">
-                <p>&copy; 2025 KB Melati 1 Purwaharja. Hak Cipta Dilindungi. | Developed Ade Susandi ❤️ for Kid Education</p>
+                <p>&copy; 2025 KB Melati 1 Purwaharja. Hak Cipta Dilindungi. | Developed with ❤️ for Kid Education</p>
             </div>
         </div>
     </footer>
 
+    <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float" onclick="openWhatsAppConsultation()" title="Chat WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</div>
+        <i class="fab fa-whatsapp"></i>
+    </div>
 
-<!-- Scroll to Top Button -->
-<button class="scroll-to-top" id="scrollToTop">
-    <i class="fas fa-arrow-up"></i>
-</button>
-	<!-- Modal Galeri -->
-<div id="galleryModal" class="modal">
-  <div class="modal-content">
-    <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <div id="modalContent"></div>
-  </div>
-</div>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <!-- JavaScript untuk interaktivitas -->
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const header = document.getElementById('header');
+        const scrollToTop = document.getElementById('scrollToTop');
 
-<!-- Panggil JavaScript dari file eksternal -->
-<script src="script.js"></script>
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                scrollToTop.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                scrollToTop.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top
+        scrollToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = header.offsetHeight;
+                    const elementPosition = target.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: elementPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission ke WhatsApp Business
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Tampilkan loading
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Mengarahkan ke WhatsApp...';
+            submitBtn.disabled = true;
+            
+            // Ambil data form
+            const nama = this.nama.value;
+            const email = this.email.value;
+            const telepon = this.telepon.value;
+            const pesan = this.pesan.value;
+            
+            // Format pesan untuk WhatsApp
+            const waMessage = `*PESAN DARI WEBSITE KB MELATI 1*%0A%0A` +
+                            `👤 *Nama:* ${nama}%0A` +
+                            `📧 *Email:* ${email}%0A` +
+                            `📞 *Telepon:* ${telepon}%0A%0A` +
+                            `💬 *Pesan:*%0A${pesan}%0A%0A` +
+                            `_Pesan dikirim melalui website KB Melati 1 Purwaharja_`;
+            
+            // Nomor WhatsApp Business sekolah (ganti dengan nomor yang benar)
+            const waNumber = '6283895603395'; // Format: 62 + nomor tanpa 0
+            
+            // Buka WhatsApp dengan pesan otomatis
+            const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
+            window.open(waURL, '_blank');
+            
+            // Reset form dan button setelah 2 detik
+            setTimeout(() => {
+                this.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                alert('Silakan kirim pesan melalui WhatsApp yang sudah terbuka. Terima kasih!');
+            }, 2000);
+        });
+
+        // Fungsi untuk membuka form pendaftaran Google Forms
+        function openRegistrationForm() {
+            // Ganti URL ini dengan Google Forms yang sudah Anda buat
+            const registrationURL = 'https://forms.gle/UuD4pguJJe7w2XBf8';
+            
+            // Buka di tab/window baru
+            window.open(registrationURL, '_blank');
+            
+            // Optional: Tampilkan pesan info
+            alert('Form pendaftaran akan terbuka di tab baru. Silakan lengkapi data pendaftaran putra/putri Anda.');
+        }
+        
+        // Fungsi untuk konsultasi WhatsApp
+        function openWhatsAppConsultation() {
+            const waMessage = `*KONSULTASI PENDAFTARAN KB MELATI 1*%0A%0A` +
+                            `Halo, saya ingin berkonsultasi mengenai:%0A` +
+                            `□ Informasi pendaftaran%0A` +
+                            `□ Program pembelajaran%0A` +
+                            `□ Biaya sekolah%0A` +
+                            `□ Fasilitas sekolah%0A` +
+                            `□ Jadwal kunjungan%0A%0A` +
+                            `Mohon informasinya. Terima kasih! 🙏`;
+            
+            const waNumber = '6283895603395'; // Nomor WhatsApp sekolah
+            const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
+            window.open(waURL, '_blank');
+        }
+        function openGalleryModal(category) {
+            const modal = document.getElementById('galleryModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            
+            // Gallery data structure
+            const galleryData = {
+                kegiatan: {
+                    title: 'Kegiatan Belajar',
+                    items: [
+                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-1.jpg', caption: 'Belajar sambil bermain' },
+                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-2.jpg', caption: 'Aktivitas kelompok' },
+                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-3.jpg', caption: 'Pembelajaran interaktif' },
+                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-4.jpg', caption: 'Kegiatan seni' },
+                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-5.jpg', caption: 'Bermain edukatif' }
+                    ]
+                },
+                fasilitas: {
+                    title: 'Fasilitas Sekolah',
+                    items: [
+                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/ruang-kelas.jpg', caption: 'Ruang kelas yang nyaman' },
+                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/taman-bermain.jpg', caption: 'Taman bermain outdoor' },
+                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/perpustakaan.jpg', caption: 'Perpustakaan mini' },
+                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/kantin.jpg', caption: 'Area makan' }
+                    ]
+                },
+                prestasi: {
+                    title: 'Prestasi Siswa',
+                    items: [
+                        { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-mewarnai.jpg', caption: 'Juara lomba mewarnai' },
+                        { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-tari.jpg', caption: 'Prestasi lomba tari' },
+                        { type: 'image', src: 'images/gallery/prestasi-siswa/sertifikat.jpg', caption: 'Sertifikat penghargaan' }
+                    ]
+                },
+                video: {
+                    title: ‘Video Pembelajaran’,
+                    items: [
+                        { type: 'video', src: 'images/gallery/video-pembelajaran/pembelajaran1.mp4', caption: 'Video pembelajaran anak' },
+                        { type: 'video', src: 'images/gallery/video-pembelajaran/senam-pagi.mp4', caption: 'Senam pagi bersama' },
+                        { type: 'video', src: 'images/gallery/video-pembelajaran/Pembelajaran1.mp4a', caption: 'Kegiatan seni kreatif' }
+                    ]
+                },
+                acara: {
+                    title: 'Acara Khusus',
+                    items: [
+                        { type: 'image', src: 'images/gallery/acara-wisuda/wisuda.jpg', caption: 'Acara wisuda' },
+                        { type: 'image', src: 'images/gallery/acara-wisuda/festival-anak.jpg', caption: 'Festival anak' },
+                        { type: 'image', src: 'images/gallery/acara-wisuda/hari-kartini.jpg', caption: 'Peringatan Hari Kartini' }
+                    ]
+                },
+                outdoor: {
+                    title: 'Kegiatan Outdoor',
+                    items: [
+                        { type: 'image', src: 'images/gallery/outdoor/sekolah-alam.jpg', caption: 'Sekolah alam' },
+                        { type: 'image', src: 'images/gallery/outdoor/berkebun.jpg', caption: 'Belajar berkebun' },
+                        { type: 'image', src: 'images/gallery/outdoor/field-trip.jpg', caption: 'Field trip edukatif' }
+                    ]
+                }
+            };
+            function fallbackImage(caption) {
+    const safe = encodeURIComponent(caption);
+    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'>
+        <rect fill='%23f0f0f0' width='300' height='200'/>
+        <text x='50%' y='50%' text-anchor='middle' fill='%23999' font-family='Arial' font-size='14'>
+            Foto: ${safe}
+        </text>
+    </svg>`;
+}
+
+const categoryData = galleryData[category];
+if (!categoryData) return;
+
+modalTitle.textContent = categoryData.title;
+
+let content = '<div class="modal-gallery-grid">';
+categoryData.items.forEach((item, index) => {
+    if (item.type === "video") {
+        content += `
+            <div class="modal-gallery-item" onclick="openImageViewer('${item.src}', '${item.caption}', 'video')">
+                <video src="${item.src}" controls></video>
+            </div>
+        `;
+    } else {
+        content += `
+            <div class="modal-gallery-item" onclick="openImageViewer('${item.src}', '${item.caption}', 'image')">
+                <img src="${item.src}" alt="${item.caption}" 
+                     onerror="this.src = fallbackImage('${item.caption}')">
+            </div>
+        `;
+    }
+});
+            content += '</div>';
+            
+            modalContent.innerHTML = content;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeGalleryModal() {
+            const modal = document.getElementById('galleryModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        function openImageViewer(src, caption, type) {
+            // Simple image/video viewer (you can enhance this further)
+            if (type === 'video') {
+                window.open(src, '_blank');
+            } else {
+                window.open(src, '_blank');
+            }
+        }
+        
+        // Category filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            categoryButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    categoryButtons.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const selectedCategory = btn.getAttribute('data-category');
+                    
+                    galleryItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        if (selectedCategory === 'all' || itemCategory === selectedCategory) {
+                            item.style.display = 'flex';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('galleryModal');
+            if (event.target === modal) {
+                closeGalleryModal();
+            }
+        }
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
 
