@@ -83,7 +83,7 @@ const galleryData = {
         title: "Fasilitas Sekolah",
         items: [
             { type: "image", src: "images/gallery/fasilitas-sekolah/mainan-dalam.jpg", caption: "Mainan dalam ruangan" },
-            { type: "image", src: "images/gallery/fasilitas-sekolah/taman-bermain.jpg", caption: "Taman bermain outdoor" }
+            { type: "image", src: "images/gallery/fasilitas-sekolah/matahariA1.jpg", caption: "Taman bermain outdoor" }
         ]
     },
     prestasi: {
@@ -102,6 +102,7 @@ const galleryData = {
         title: "Kegiatan Outdoor",
         items: [
             { type: "image", src: "images/gallery/outdoor/kbmo1.jpg", caption: "Kegiatan belajar di luar ruangan" }
+            { type: "image", src: "images/gallery/outdoor/ayunan.jpg", caption: "Kegiatan belajar di luar ruangan" }
         ]
     }
 };
@@ -159,3 +160,4 @@ window.onclick = function(event) {
         closeGalleryModal();
     }
 };
+
