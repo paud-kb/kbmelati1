@@ -102,7 +102,7 @@ const galleryData = {
         title: "Kegiatan Outdoor",
         items: [
             { type: "image", src: "images/gallery/outdoor/kbmo1.jpg", caption: "Kegiatan belajar di luar ruangan" }
-            { type: "image", src: "images/gallery/outdoor/ayunan.jpg", caption: "Kegiatan belajar di luar ruangan" }
+            { type: "image", src: "images/gallery/outdoor/Ayunan.jpg", caption: "Kegiatan belajar di luar ruangan" }
         ]
     }
 };
@@ -160,4 +160,5 @@ window.onclick = function(event) {
         closeGalleryModal();
     }
 };
+
 
