@@ -36,3 +36,24 @@ function halo() {
         document.body.appendChild(script);
     }
 })();
+// Scroll to Top Button
+const scrollToTop = document.getElementById("scrollToTop");
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+        header.classList.add("scrolled");
+        scrollToTop.classList.add("visible");
+    } else {
+        header.classList.remove("scrolled");
+        scrollToTop.classList.remove("visible");
+    }
+});
+
+scrollToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
