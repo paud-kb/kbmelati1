@@ -5,7 +5,7 @@ function openRegistrationForm() {
 
 // Tombol "Konsultasi" → buka WhatsApp
 function openWhatsAppConsultation() {
-    window.open("https://wa.me/6281234567890", "_blank");
+    window.open("https://wa.me/6283895603395", "_blank");
 }
 
 // Fungsi alert opsional
@@ -15,10 +15,11 @@ function halo() {
 
 // TikTok Embed
 (function loadTikTokEmbed() {
-    if (!document.querySelector('script[src="https://www.tiktok.com/embed.js"]')) {
+    if (!document.querySelector('script[src="https://www.tiktok.com/@kobermelati1/embed.js"]')) {
         const script = document.createElement('script');
-        script.src = "https://www.tiktok.com/embed.js";
+        script.src = "https://www.tiktok.com/@kobermelati1/embed.js";
         script.async = true;
         document.body.appendChild(script);
     }
 })();
+
