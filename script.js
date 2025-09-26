@@ -57,3 +57,33 @@ scrollToTop.addEventListener("click", () => {
     });
 });
 
+const galleryData = {
+  kegiatan: {
+    title: "Kegiatan Belajar",
+    items: [
+      {
+        type: "image",
+        src: "https://drive.google.com/uc?id=1xjuXl_HGKGkdYsFvbPBreBYcdWzvQWU6",
+        caption: "Belajar sambil bermain"
+      },
+      {
+        type: "image",
+        src: "https://drive.google.com/uc?id=1sf2Z7RcJUjFZzVBeHWk6067t0Zp2xusC",
+        caption: "Aktivitas kelompok"
+      }
+    ]
+  },
+  fasilitas: {
+    title: "Fasilitas Sekolah",
+    items: [
+      {
+        type: "image",
+        src: "https://drive.google.com/uc?id=1yGiHzQQHqUR0mw_PUZa3Bps4XI7Q4GMx",
+        caption: "Taman bermain outdoor"
+      }
+    ]
+  }
+  // dst...
+};
+
+
