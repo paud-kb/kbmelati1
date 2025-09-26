@@ -149,3 +149,60 @@ footer {
     margin: 5px 0;
   }
 }
+/* Modal dasar */
+.modal {
+  display: none; /* default tertutup */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Konten modal */
+.modal-content {
+  background: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Tombol close */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Grid dalam modal */
+.modal-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.modal-gallery-item img,
+.modal-gallery-item video {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.modal-gallery-item img:hover,
+.modal-gallery-item video:hover {
+  transform: scale(1.05);
+}
+
