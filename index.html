@@ -1116,11 +1116,11 @@ box-sizing: border-box;
 
     <!-- Tombol kategori (tanpa tombol "Semua") -->
     <div class="gallery-categories">
-      <a href="images/gallery/kegiatan-belajar/" class="category-btn">Kegiatan Belajar</a>
-      <a href="images/gallery/fasilitas-sekolah/" class="category-btn">Fasilitas Sekolah</a>
-      <a href="images/gallery/prestasi-siswa/" class="category-btn">Prestasi Siswa</a>
-      <a href="images/gallery/acara-wisuda/" class="category-btn">Acara Wisuda</a>
-      <a href="images/gallery/outdoor/" class="category-btn">Outdoor</a>
+      <button class="category-btn" onclick="openGalleryModal('kegiatan')">Kegiatan Belajar</button>
+      <button class="category-btn" onclick="openGalleryModal('fasilitas')">Fasilitas Sekolah</button>
+      <button class="category-btn" onclick="openGalleryModal('prestasi')">Prestasi Siswa</button>
+      <button class="category-btn" onclick="openGalleryModal('acara')">Acara Wisuda</button>
+      <button class="category-btn" onclick="openGalleryModal('outdoor')">Outdoor</button>
       <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
     </div>
 
@@ -1132,54 +1132,54 @@ box-sizing: border-box;
     <!-- Grid thumbnail per kategori -->
     <div class="gallery-grid">
       <!-- Kegiatan Belajar -->
-      <a href="images/gallery/kegiatan-belajar/" class="gallery-item">
+      <div class="gallery-item" onclick="openGalleryModal('kegiatan')">
         <img src="images/gallery/kegiatan-belajar/kbm1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-images"></i>
           <h4>Kegiatan Belajar</h4>
           <p>15 Foto • Lihat Semua</p>
         </div>
-      </a>
+      </div>
 
       <!-- Fasilitas Sekolah -->
-      <a href="images/gallery/fasilitas-sekolah/" class="gallery-item">
+      <div class="gallery-item" onclick="openGalleryModal('fasilitas')">
         <img src="images/gallery/fasilitas-sekolah/mainan-dalam.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-building"></i>
           <h4>Fasilitas Sekolah</h4>
           <p>12 Foto • Lihat Semua</p>
         </div>
-      </a>
+      </div>
 
       <!-- Prestasi Siswa -->
-      <a href="images/gallery/prestasi-siswa/" class="gallery-item">
+      <div class="gallery-item" onclick="openGalleryModal('prestasi')">
         <img src="images/gallery/prestasi-siswa/Trofi.jpg" alt="Prestasi Siswa" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-trophy"></i>
           <h4>Prestasi Siswa</h4>
           <p>8 Foto • Lihat Semua</p>
         </div>
-      </a>
+      </div>
 
       <!-- Acara Wisuda -->
-      <a href="images/gallery/acara-wisuda/" class="gallery-item">
+      <div class="gallery-item" onclick="openGalleryModal('acara')">
         <img src="images/gallery/acara-wisuda/wisuda1.jpg" alt="Acara Wisuda" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-calendar-star"></i>
           <h4>Acara Wisuda</h4>
           <p>10 Foto • Lihat Semua</p>
         </div>
-      </a>
+      </div>
 
       <!-- Outdoor -->
-      <a href="images/gallery/outdoor/" class="gallery-item">
+      <div class="gallery-item" onclick="openGalleryModal('outdoor')">
         <img src="images/gallery/outdoor/kbmo1.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
         <div class="gallery-overlay">
           <i class="fas fa-tree"></i>
           <h4>Kegiatan Outdoor</h4>
           <p>9 Foto • Lihat Semua</p>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -1314,6 +1314,7 @@ box-sizing: border-box;
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
