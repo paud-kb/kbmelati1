@@ -1,6 +1,6 @@
 // Data galeri global
 window.galleryData = {
-  kegiatan: {
+  kegiatan-belajar: {
     title: 'Kegiatan Belajar',
     items: [
       { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-1.jpg', caption: 'Belajar sambil bermain' },
@@ -10,7 +10,7 @@ window.galleryData = {
       { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-5.jpg', caption: 'Bermain edukatif' }
     ]
   },
-  fasilitas: {
+  fasilitas-sekolah: {
     title: 'Fasilitas Sekolah',
     items: [
       { type: 'image', src: 'images/gallery/fasilitas-sekolah/ruang-kelas.jpg', caption: 'Ruang kelas yang nyaman' },
@@ -19,7 +19,7 @@ window.galleryData = {
       { type: 'image', src: 'images/gallery/fasilitas-sekolah/mainan-dalam.jpg', caption: 'Area makan' }
     ]
   },
-  prestasi: {
+  prestasi-siswa: {
     title: 'Prestasi Siswa',
     items: [
       { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-mewarnai.jpg', caption: 'Juara lomba mewarnai' },
@@ -27,8 +27,8 @@ window.galleryData = {
       { type: 'image', src: 'images/gallery/prestasi-siswa/piala.jpg', caption: 'Sertifikat penghargaan' }
     ]
   },
-  acara: {
-    title: 'Acara Khusus',
+  acara-wisuda: {
+    title: 'Acara Wisuda',
     items: [
       { type: 'image', src: 'images/gallery/acara-wisuda/wisuda4.jpg', caption: 'Acara wisuda' },
       { type: 'image', src: 'images/gallery/acara-wisuda/wisuda2.jpg', caption: 'Festival anak' },
@@ -36,7 +36,7 @@ window.galleryData = {
     ]
   },
   outdoor: {
-    title: 'Kegiatan Outdoor',
+    title: 'Outdoor',
     items: [
       { type: 'image', src: 'images/gallery/outdoor/sekolah-alam.jpg', caption: 'Sekolah alam' },
       { type: 'image', src: 'images/gallery/outdoor/berkebun.jpg', caption: 'Belajar berkebun' },
@@ -108,3 +108,4 @@ function openWhatsAppConsultation() {
   const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
   window.open(waURL, "_blank");
 }
+
