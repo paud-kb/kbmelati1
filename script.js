@@ -13,10 +13,11 @@ window.galleryData = {
   fasilitas-sekolah: {
     title: 'Fasilitas Sekolah',
     items: [
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/ruang-kelas.jpg', caption: 'Ruang kelas yang nyaman' },
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/taman-bermain.jpg', caption: 'Taman bermain outdoor' },
+      { type: 'image', src: 'images/gallery/fasilitas-sekolah/mainan-dalam.jpg', caption: 'Ruang kelas yang nyaman' },
+      { type: 'image', src: 'images/gallery/fasilitas-sekolah/perpustakaan.jpg', caption: 'Taman bermain outdoor' },
+      { type: 'image', src: 'images/gallery/fasilitas-sekolah/ruang-kelas.jpg', caption: 'Perpustakaan mini' },
       { type: 'image', src: 'images/gallery/fasilitas-sekolah/sekolah.jpg', caption: 'Perpustakaan mini' },
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/mainan-dalam.jpg', caption: 'Area makan' }
+      { type: 'image', src: 'images/gallery/fasilitas-sekolah/taman-bermain.jpg', caption: 'Area makan' }
     ]
   },
   prestasi-siswa: {
@@ -31,6 +32,7 @@ window.galleryData = {
     title: 'Acara Wisuda',
     items: [
       { type: 'image', src: 'images/gallery/acara-wisuda/wisuda4.jpg', caption: 'Acara wisuda' },
+      { type: 'image', src: 'images/gallery/acara-wisuda/wisuda.jpg', caption: 'Acara wisuda' },
       { type: 'image', src: 'images/gallery/acara-wisuda/wisuda2.jpg', caption: 'Festival anak' },
       { type: 'image', src: 'images/gallery/acara-wisuda/wisuda3.jpg', caption: 'Peringatan Hari Kartini' }
     ]
@@ -108,4 +110,5 @@ function openWhatsAppConsultation() {
   const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
   window.open(waURL, "_blank");
 }
+
 
