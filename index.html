@@ -1144,59 +1144,59 @@ box-sizing: border-box;
     </blockquote>
     <script async src="https://www.tiktok.com/embed.js"></script>
 
-    <!-- Grid thumbnail per kategori -->
-    <div class="gallery-grid">
-      <!-- Kegiatan Belajar -->
-      <a href="images/gallery/kegiatan-belajar/" class="gallery-item">
-        <img src="images/gallery/kegiatan-belajar/kegiatan-1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
-        <div class="gallery-overlay">
-          <i class="fas fa-images"></i>
-          <h4>Kegiatan Belajar</h4>
-          <p>15 Foto • Lihat Semua</p>
-        </div>
-      </a>
-
-      <!-- Fasilitas Sekolah -->
-      <a href="images/gallery/fasilitas-sekolah/" class="gallery-item">
-        <img src="images/gallery/fasilitas-sekolah/taman-bermain.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
-        <div class="gallery-overlay">
-          <i class="fas fa-building"></i>
-          <h4>Fasilitas Sekolah</h4>
-          <p>12 Foto • Lihat Semua</p>
-        </div>
-      </a>
-
-      <!-- Prestasi Siswa -->
-      <a href="images/gallery/prestasi-siswa/" class="gallery-item">
-        <img src="images/gallery/prestasi-siswa/piala.jpg" alt="Prestasi Siswa" class="gallery-thumb">
-        <div class="gallery-overlay">
-          <i class="fas fa-trophy"></i>
-          <h4>Prestasi Siswa</h4>
-          <p>8 Foto • Lihat Semua</p>
-        </div>
-      </a>
-
-      <!-- Acara Wisuda -->
-      <a href="images/gallery/acara-wisuda/" class="gallery-item">
-        <img src="images/gallery/acara-wisuda/wisuda4.jpg" alt="Acara Wisuda" class="gallery-thumb">
-        <div class="gallery-overlay">
-          <i class="fas fa-calendar-star"></i>
-          <h4>Acara Wisuda</h4>
-          <p>10 Foto • Lihat Semua</p>
-        </div>
-      </a>
-
-      <!-- Outdoor -->
-      <a href="images/gallery/outdoor/" class="gallery-item">
-        <img src="images/gallery/outdoor/sekolah-alam.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
-        <div class="gallery-overlay">
-          <i class="fas fa-tree"></i>
-          <h4>Kegiatan Outdoor</h4>
-          <p>9 Foto • Lihat Semua</p>
-        </div>
-      </a>
+    <!-- Grid thumbnail per kategori (klik akan buka modal dinamis) -->
+<div class="gallery-grid">
+  <!-- Kegiatan Belajar -->
+  <a href="#" class="gallery-item" onclick="openGallery('kegiatan'); return false;">
+    <img src="images/gallery/kegiatan-belajar/kegiatan-1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
+    <div class="gallery-overlay">
+      <i class="fas fa-images"></i>
+      <h4>Kegiatan Belajar</h4>
+      <p>15 Foto • Lihat Semua</p>
     </div>
-  </div>
+  </a>
+
+  <!-- Fasilitas Sekolah -->
+  <a href="#" class="gallery-item" onclick="openGallery('fasilitas'); return false;">
+    <img src="images/gallery/fasilitas-sekolah/taman-bermain.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
+    <div class="gallery-overlay">
+      <i class="fas fa-building"></i>
+      <h4>Fasilitas Sekolah</h4>
+      <p>12 Foto • Lihat Semua</p>
+    </div>
+  </a>
+
+  <!-- Prestasi Siswa -->
+  <a href="#" class="gallery-item" onclick="openGallery('prestasi'); return false;">
+    <img src="images/gallery/prestasi-siswa/piala.jpg" alt="Prestasi Siswa" class="gallery-thumb">
+    <div class="gallery-overlay">
+      <i class="fas fa-trophy"></i>
+      <h4>Prestasi Siswa</h4>
+      <p>8 Foto • Lihat Semua</p>
+    </div>
+  </a>
+
+  <!-- Acara Wisuda -->
+  <a href="#" class="gallery-item" onclick="openGallery('acara'); return false;">
+    <img src="images/gallery/acara-wisuda/wisuda4.jpg" alt="Acara Wisuda" class="gallery-thumb">
+    <div class="gallery-overlay">
+      <i class="fas fa-calendar-star"></i>
+      <h4>Acara Wisuda</h4>
+      <p>10 Foto • Lihat Semua</p>
+    </div>
+  </a>
+
+  <!-- Outdoor -->
+  <a href="#" class="gallery-item" onclick="openGallery('outdoor'); return false;">
+    <img src="images/gallery/outdoor/sekolah-alam.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
+    <div class="gallery-overlay">
+      <i class="fas fa-tree"></i>
+      <h4>Kegiatan Outdoor</h4>
+      <p>9 Foto • Lihat Semua</p>
+    </div>
+  </a>
+</div>
+</div>
 </section>
 
     <!-- Contact Section -->
@@ -1423,59 +1423,7 @@ box-sizing: border-box;
             }, 3000);
         });
 
-            function openGalleryModal(category) {
-            const modal = document.getElementById('galleryModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalContent = document.getElementById('modalContent');
-            
-            // Gallery data structure
-            const galleryData = {
-                kegiatan: {
-                    title: 'Kegiatan Belajar',
-                    items: [
-                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-1.jpg', caption: 'Belajar sambil bermain' },
-                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-2.jpg', caption: 'Aktivitas kelompok' },
-                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-3.jpg', caption: 'Pembelajaran interaktif' },
-                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-4.jpg', caption: 'Kegiatan seni' },
-                        { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-5.jpg', caption: 'Bermain edukatif' }
-                    ]
-                },
-                fasilitas: {
-                    title: 'Fasilitas Sekolah',
-                    items: [
-                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/ruang-kelas.jpg', caption: 'Ruang kelas yang nyaman' },
-                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/taman-bermain.jpg', caption: 'Taman bermain outdoor' },
-                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/sekolah.jpg', caption: 'Perpustakaan mini' },
-                        { type: 'image', src: 'images/gallery/fasilitas-sekolah/mainan-dalam.jpg', caption: 'Area makan' }
-                    ]
-                },
-                prestasi: {
-                    title: 'Prestasi Siswa',
-                    items: [
-                        { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-mewarnai.jpg', caption: 'Juara lomba mewarnai' },
-                        { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-tari.jpg', caption: 'Prestasi lomba tari' },
-                        { type: 'image', src: 'images/gallery/prestasi-siswa/piala.jpg', caption: 'Sertifikat penghargaan' }
-                    ]
-                },
-                
-                acara: {
-                    title: 'Acara Khusus',
-                    items: [
-                        { type: 'image', src: 'images/gallery/acara-wisuda/wisuda4.jpg', caption: 'Acara wisuda' },
-                        { type: 'image', src: 'images/gallery/acara-wisuda/wisuda2.jpg', caption: 'Festival anak' },
-                        { type: 'image', src: 'images/gallery/acara-wisuda/wisuda3.jpg', caption: 'Peringatan Hari Kartini' }
-                    ]
-                },
-                outdoor: {
-                    title: 'Kegiatan Outdoor',
-                    items: [
-                        { type: 'image', src: 'images/gallery/outdoor/sekolah-alam.jpg', caption: 'Sekolah alam' },
-                        { type: 'image', src: 'images/gallery/outdoor/berkebun.jpg', caption: 'Belajar berkebun' },
-                        { type: 'image', src: 'images/gallery/outdoor/field-trip.jpg', caption: 'Field trip edukatif' }
-                    ]
-                }
-            };
-            function fallbackImage(caption) {
+    function fallbackImage(caption) {
     const safe = encodeURIComponent(caption);
     return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'>
         <rect fill='%23f0f0f0' width='300' height='200'/>
@@ -1564,13 +1512,14 @@ categoryData.items.forEach((item, index) => {
             });
         });
         
-            // Close modal when clicking outside
-    window.onclick = function(event) {
-        const modal = document.getElementById('galleryModal');
-        if (event.target === modal) {
-            closeGalleryModal();
-        }
-    }
+// Close modal when clicking outside (compatible dengan closeGalleryModal di script.js)
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('galleryModal');
+  if (modal && event.target === modal) {
+    if (typeof closeGalleryModal === 'function') closeGalleryModal();
+  }
+});
+
 </script>
 
 <!-- Modal Galeri -->
@@ -1586,4 +1535,3 @@ categoryData.items.forEach((item, index) => {
 <script src="script.js"></script>
 </body>
 </html>
-
