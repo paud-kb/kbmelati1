@@ -48,7 +48,7 @@ window.galleryData = {
 };
 
 // Fungsi untuk membuka galeri dan menampilkan gambar-gambar
-function openGallery(category) {
+  function openGallery(category) {
   console.log(window.galleryData[category]); // Mengecek data kategori yang dipilih
 
   const modal = document.getElementById('galleryModal');
@@ -110,5 +110,6 @@ function openWhatsAppConsultation() {
   const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
   window.open(waURL, "_blank");
 }
+
 
 
