@@ -21,13 +21,3 @@ function openWhatsAppConsultation() {
     const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
     window.open(waURL, "_blank");
 }
-
-// TikTok Embed
-(function loadTikTokEmbed() {
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kobermelati1" data-unique-id="kobermelati1" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" > 
-    <section> <a target="_blank" href="https://www.tiktok.com/@kobermelati1?refer=creator_embed">@kobermelati1</a> 
-    </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-    }
-})();
-
-
