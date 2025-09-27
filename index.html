@@ -1330,7 +1330,7 @@ box-sizing: border-box;
 
 <!-- JavaScript untuk interaktivitas -->
 <script>
-// ===== mobile menu, header, scroll, form (defensive) =====
+// ===== mobile menu, header, scroll, form =====
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 const header = document.getElementById('header');
@@ -1342,7 +1342,6 @@ if (hamburger && navMenu) {
     navMenu.classList.toggle('active');
   });
 
-  // Close mobile menu when clicking on a link
   document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('active');
@@ -1381,7 +1380,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Form submission ke WhatsApp Business (safety: cek kalau form ada)
+// Form submission ke WhatsApp Business
 const contactForm = document.querySelector('form');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
@@ -1414,7 +1413,7 @@ if (contactForm) {
   });
 }
 
-// fallback image generator (dipakai jika file gambar tidak ditemukan)
+// fallback image generator
 function fallbackImage(caption) {
   const safe = encodeURIComponent(caption);
   return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'>
@@ -1425,7 +1424,7 @@ function fallbackImage(caption) {
   </svg>`;
 }
 
-// Close modal when clicking outside (tidak menimpa window.onclick)
+// Close modal when clicking outside
 window.addEventListener('click', function(event) {
   const modal = document.getElementById('galleryModal');
   if (modal && event.target === modal) {
@@ -1433,7 +1432,7 @@ window.addEventListener('click', function(event) {
   }
 });
 
-// --- gallery data global untuk dipakai oleh script.js (HARUS sebelum script.js di-include) ---
+// --- gallery data global untuk dipakai oleh script.js ---
 window.galleryData = {
   kegiatan: {
     title: 'Kegiatan Belajar',
@@ -1480,7 +1479,7 @@ window.galleryData = {
   }
 };
 </script>
-	
+
 <!-- Modal Galeri -->
 <div id="galleryModal" class="modal" style="display:none;">
   <div class="modal-content">
@@ -1489,15 +1488,8 @@ window.galleryData = {
     <div id="galleryItems" class="gallery-grid"></div>
   </div>
 </div>
+
 <!-- Panggil file script.js eksternal -->
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
