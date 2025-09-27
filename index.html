@@ -1122,11 +1122,11 @@ box-sizing: border-box;
 
     <!-- Tombol kategori (tanpa tombol "Semua") -->
 <div class="gallery-categories">
-<button class="category-btn" onclick="openGallery('kegiatan')">Kegiatan Belajar</button>
-<button class="category-btn" onclick="openGallery('fasilitas')">Fasilitas Sekolah</button>
-<button class="category-btn" onclick="openGallery('prestasi')">Prestasi Siswa</button>
-<button class="category-btn" onclick="openGallery('acara')">Acara Wisuda</button>
-<button class="category-btn" onclick="openGallery('outdoor')">Outdoor</button>
+<button onclick="openGallery('kegiatan')">Kegiatan Belajar</button>
+<button onclick="openGallery('fasilitas')">Fasilitas Sekolah</button>
+<button onclick="openGallery('prestasi')">Prestasi Siswa</button>
+<button onclick="openGallery('acara')">Acara Khusus</button>
+<button onclick="openGallery('outdoor')">Kegiatan Outdoor</button>
 <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
 </div>
 
@@ -1481,7 +1481,7 @@ window.galleryData = {
 </script>
 
 <!-- Modal Galeri -->
-<div id="galleryModal" class="modal" style="display:none;">
+<div id="galleryModal" class="modal">
   <div class="modal-content">
     <span class="close" onclick="closeGalleryModal()">&times;</span>
     <h2 id="galleryTitle"></h2>
@@ -1493,6 +1493,7 @@ window.galleryData = {
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
