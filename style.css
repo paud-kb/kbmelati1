@@ -10,6 +10,7 @@ body {
   background: #f9f9f9;
   text-align: center;
   padding: 20px;
+  width: 100%; /* Memastikan body responsif */
   max-width: 1200px;
   margin: 0 auto;
   color: #333;
@@ -76,21 +77,11 @@ footer {
   margin-top: 40px;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 1.5em;
-  }
-  
-  header nav a {
-    display: block;
-    margin: 5px 0;
-  }
-}
+/* ===== Modal ===== */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000; /* Pastikan modal berada di atas konten lainnya */
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -109,6 +100,7 @@ footer {
 }
 .modal-content img {
   width: 100%;
+  height: auto; /* Menjaga proporsi gambar */
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -116,22 +108,45 @@ footer {
   float: right;
   font-size: 30px;
   cursor: pointer;
+  padding: 10px; /* Menambah area klik tombol close */
 }
+
+/* ===== Gallery ===== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
 }
 
+/* Responsif untuk perangkat dengan layar lebih kecil */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Satu kolom penuh di layar kecil */
+    gap: 5px;
+  }
+}
+
+/* Gambar Galeri */
 .gallery-item img {
   width: 100%;
+  height: auto; /* Menjaga proporsi gambar */
   border-radius: 10px;
   transition: transform 0.3s;
 }
-
 .gallery-item img:hover {
   transform: scale(1.05);
 }
 
-
-
+/* Responsif untuk tombol */
+@media (max-width: 480px) {
+  button, .btn {
+    padding: 8px 16px; /* Menyesuaikan ukuran tombol pada layar kecil */
+  }
+}
