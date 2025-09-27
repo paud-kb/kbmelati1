@@ -1121,16 +1121,16 @@ box-sizing: border-box;
     </div>
 
     <!-- Tombol kategori (tanpa tombol "Semua") -->
-    <div class="gallery-categories">
-      <a href="images/gallery/kegiatan-belajar/" class="category-btn">Kegiatan Belajar</a>
-      <a href="images/gallery/fasilitas-sekolah/" class="category-btn">Fasilitas Sekolah</a>
-      <a href="images/gallery/prestasi-siswa/" class="category-btn">Prestasi Siswa</a>
-      <a href="images/gallery/acara-wisuda/" class="category-btn">Acara Wisuda</a>
-      <a href="images/gallery/outdoor/" class="category-btn">Outdoor</a>
-      <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
-    </div>
+   <div class="gallery-categories">
+  <button onclick="openGallery('kegiatan')" class="category-btn">Kegiatan Belajar</button>
+  <button onclick="openGallery('fasilitas')" class="category-btn">Fasilitas Sekolah</button>
+  <button onclick="openGallery('prestasi')" class="category-btn">Prestasi Siswa</button>
+  <button onclick="openGallery('acara')" class="category-btn">Acara Wisuda</button>
+  <button onclick="openGallery('outdoor')" class="category-btn">Outdoor</button>
+  <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
+  </div>
 
-    <!-- Heading TikTok -->
+	<!-- Heading TikTok -->
     <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="tiktok-heading">
       Follow & tonton video kami di TikTok 📹
     </a>
@@ -1564,16 +1564,25 @@ categoryData.items.forEach((item, index) => {
             });
         });
         
-        // Close modal when clicking outside
+            // Close modal when clicking outside
     window.onclick = function(event) {
         const modal = document.getElementById('galleryModal');
         if (event.target === modal) {
             closeGalleryModal();
         }
     }
-    </script>
+</script>
 
-    <!-- Panggil file script.js eksternal -->
-    <script src="script.js"></script>
+<!-- Modal Galeri -->
+<div id="galleryModal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" onclick="closeGalleryModal()">&times;</span>
+    <h2 id="galleryTitle"></h2>
+    <div id="galleryItems" class="gallery-grid"></div>
+  </div>
+</div>
+
+<!-- Panggil file script.js eksternal -->
+<script src="script.js"></script>
 </body>
 </html>
