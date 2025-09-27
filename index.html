@@ -1061,8 +1061,7 @@ box-sizing: border-box;
             <h2>Kegiatan Sekolah</h2>
             <p>Berbagai aktivitas menarik yang mendukung perkembangan anak</p>
         </div>
-        
-        <div class="news-grid">
+                <div class="news-grid">
                 <div class="news-card">
                     <div class="news-image">
                         <i class="fas fa-graduation-cap"></i>
@@ -1077,8 +1076,7 @@ box-sizing: border-box;
                     </ul>
                 </div>
             </div>
-            
-            <div class="news-card">
+                    <div class="news-card">
                     <div class="news-image">
                         <i class="fas fa-trophy"></i>
                     </div>
@@ -1111,7 +1109,6 @@ box-sizing: border-box;
     </div>
 </section>
 
-
 <!-- Gallery Section -->
 <section class="section" id="galeri" style="background-color: #f8f9ff;">
   <div class="container">
@@ -1119,21 +1116,7 @@ box-sizing: border-box;
       <h2>Galeri Foto & Video</h2>
       <p>Dokumentasi kegiatan dan fasilitas KB Melati 1 Purwaharja</p>
     </div>
-
-    <!-- Tombol kategori galeri -->
-    <div class="gallery-categories">
-      <button onclick="openGallery('kegiatan-belajar')">Kegiatan Belajar</button>
-      <button onclick="openGallery('fasilitas-sekolah')">Fasilitas Sekolah</button>
-      <button onclick="openGallery('prestasi-siswa')">Prestasi Siswa</button>
-      <button onclick="openGallery('acara-wisuda')">Acara Wisuda</button>
-      <button onclick="openGallery('outdoor')">Kegiatan Outdoor</button>
-      <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
-    </div>
-  </div>
-</section>
-
-
-	<!-- Heading TikTok -->
+						<!-- Heading TikTok -->
     <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="tiktok-heading">
       Follow & tonton video kami di TikTok 📹
     </a>
@@ -1146,11 +1129,22 @@ box-sizing: border-box;
     </section>
     </blockquote>
     <script async src="https://www.tiktok.com/embed.js"></script>
-
+    
+	  <!-- Tombol kategori galeri -->
+    <div class="gallery-categories">
+      <button onclick="openGallery('kegiatan-belajar')">Kegiatan Belajar</button>
+      <button onclick="openGallery('fasilitas-sekolah')">Fasilitas Sekolah</button>
+      <button onclick="openGallery('prestasi-siswa')">Prestasi Siswa</button>
+      <button onclick="openGallery('acara-wisuda')">Acara Wisuda</button>
+      <button onclick="openGallery('outdoor')">Kegiatan Outdoor</button>
+      <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
+    </div>
+  </div>
+</section>
+	
 <!-- Grid thumbnail per kategori (klik akan buka modal dinamis) -->
 <section id="gallery">
   <div class="gallery-grid">
-
     <!-- Kegiatan Belajar -->
     <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('kegiatan')">
       <img src="images/gallery/kegiatan-belajar/kegiatan-1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
@@ -1160,7 +1154,6 @@ box-sizing: border-box;
         <p>15 Foto • Lihat Semua</p>
       </div>
     </a>
-
     <!-- Fasilitas Sekolah -->
     <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('fasilitas')">
       <img src="images/gallery/fasilitas-sekolah/taman-bermain.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
@@ -1170,7 +1163,6 @@ box-sizing: border-box;
         <p>12 Foto • Lihat Semua</p>
       </div>
     </a>
-
     <!-- Prestasi Siswa -->
     <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('prestasi')">
       <img src="images/gallery/prestasi-siswa/piala.jpg" alt="Prestasi Siswa" class="gallery-thumb">
@@ -1200,7 +1192,6 @@ box-sizing: border-box;
         <p>9 Foto • Lihat Semua</p>
       </div>
     </a>
-
   </div>
 </section>
 
@@ -1496,6 +1487,7 @@ window.galleryData = {
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
