@@ -10,10 +10,10 @@ body {
   background: #f9f9f9;
   text-align: center;
   padding: 20px;
-  width: 100%; /* Memastikan body responsif */
   max-width: 1200px;
   margin: 0 auto;
   color: #333;
+  width: 100%; /* Agar body responsif */
 }
 
 /* ===== Header ===== */
@@ -54,40 +54,36 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* ===== Buttons ===== */
-button, .btn {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1em;
+/* ===== Gallery Grid ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid yang fleksibel */
+  gap: 15px;
 }
 
-button:hover, .btn:hover {
-  background: #45a049;
+.gallery-item img {
+  width: 100%;
+  height: auto; /* Menjaga proporsi gambar */
+  border-radius: 10px;
+  transition: transform 0.3s;
 }
 
-/* ===== Footer ===== */
-footer {
-  background: #333;
-  color: white;
-  padding: 15px;
-  margin-top: 40px;
+/* Efek zoom saat hover */
+.gallery-item img:hover {
+  transform: scale(1.05);
 }
 
-/* ===== Modal ===== */
+/* ===== Modal Galeri ===== */
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1000; /* Pastikan modal berada di atas konten lainnya */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
@@ -98,55 +94,85 @@ footer {
   width: 90%;
   max-width: 800px;
 }
+
 .modal-content img {
   width: 100%;
-  height: auto; /* Menjaga proporsi gambar */
+  height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+/* Tombol close modal */
 .close {
   float: right;
   font-size: 30px;
   cursor: pointer;
-  padding: 10px; /* Menambah area klik tombol close */
 }
 
-/* ===== Gallery ===== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+/* ===== Tombol Galeri ===== */
+button, .btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background 0.3s ease;
 }
 
-/* Responsif untuk perangkat dengan layar lebih kecil */
+/* Efek hover tombol */
+button:hover, .btn:hover {
+  background: #45a049;
+}
+
+/* ===== Form dan Konsultasi ===== */
+footer {
+  background: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* ===== Responsive Design ===== */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  header nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
   .gallery-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Menyesuaikan grid pada layar lebih kecil */
     gap: 10px;
   }
+
+  .gallery-item img {
+    transition: transform 0.3s;
+  }
+
+  button, .btn {
+    padding: 8px 16px; /* Menyesuaikan ukuran tombol di layar kecil */
+  }
 }
 
 @media (max-width: 480px) {
   .gallery-grid {
-    grid-template-columns: 1fr; /* Satu kolom penuh di layar kecil */
+    grid-template-columns: 1fr; /* Satu kolom pada layar lebih kecil */
     gap: 5px;
+  }
+
+  .close {
+    font-size: 25px;
   }
 }
 
-/* Gambar Galeri */
-.gallery-item img {
-  width: 100%;
-  height: auto; /* Menjaga proporsi gambar */
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsif untuk tombol */
-@media (max-width: 480px) {
-  button, .btn {
-    padding: 8px 16px; /* Menyesuaikan ukuran tombol pada layar kecil */
+/* ===== Modal Styling untuk Gambar Fullscreen ===== */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%; /* Modal mengambil lebih banyak lebar layar pada perangkat kecil */
   }
 }
