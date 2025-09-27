@@ -1399,7 +1399,7 @@ box-sizing: border-box;
             const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
             window.open(waURL, '_blank');
             
-            // Reset form dan button setelah 2 detik
+            // Reset form dan button setelah 3 detik
             setTimeout(() => {
                 this.reset();
                 submitBtn.textContent = originalText;
@@ -1593,6 +1593,7 @@ categoryData.items.forEach((item, index) => {
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
