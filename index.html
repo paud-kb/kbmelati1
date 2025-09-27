@@ -1432,35 +1432,6 @@ box-sizing: border-box;
         </text>
     </svg>`;
 }
-
-const categoryData = galleryData[category];
-if (!categoryData) return;
-
-modalTitle.textContent = categoryData.title;
-
-let content = '<div class="modal-gallery-grid">';
-categoryData.items.forEach((item, index) => {
-    if (item.type === "video") {
-        content += `
-            <div class="modal-gallery-item" onclick="openImageViewer('${item.src}', '${item.caption}', 'video')">
-                <video src="${item.src}" controls></video>
-            </div>
-        `;
-    } else {
-        content += `
-            <div class="modal-gallery-item" onclick="openImageViewer('${item.src}', '${item.caption}', 'image')">
-                <img src="${item.src}" alt="${item.caption}" 
-                     onerror="this.src = fallbackImage('${item.caption}')">
-            </div>
-        `;
-    }
-});
-            content += '</div>';
-            
-            modalContent.innerHTML = content;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
         
         function closeGalleryModal() {
             const modal = document.getElementById('galleryModal');
@@ -1582,6 +1553,7 @@ window.galleryData = {
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
