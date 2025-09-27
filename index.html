@@ -815,7 +815,7 @@ box-sizing: border-box;
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 80px;
+            bottom: 100px;
             right: 20px;
             background: #25d366;
             color: white;
@@ -849,7 +849,7 @@ box-sizing: border-box;
         .scroll-to-top {
             position: fixed;
             bottom: 20px;
-            right: 20px;
+            right: 90px;
             background: #667eea;
             color: white;
             width: 50px;
@@ -872,6 +872,13 @@ box-sizing: border-box;
             background: #764ba2;
             transform: translateY(-2px);
         }
+	/* Responsif untuk kalender tahunan */
+#akademis img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
     </style>
 </head>
 <body>
@@ -918,8 +925,7 @@ box-sizing: border-box;
                 <p>Memberikan pendidikan terbaik untuk masa depan cemerlang putra-putri Anda</p>
                 <div class="cta-buttons">
                     <a href="#" onclick="openRegistrationForm()" class="btn btn-primary">Daftar Sekarang</a>
-                    
-                </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -1128,6 +1134,15 @@ box-sizing: border-box;
     <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="tiktok-heading">
       Follow & tonton video kami di TikTok 📹
     </a>
+
+	  <!-- TikTok Embed -->
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kobermelati1" 
+    data-unique-id="kobermelati1" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
+    <section>
+    <a target="_blank" href="https://www.tiktok.com/@kobermelati1?refer=creator_embed">@kobermelati1</a>
+    </section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
 
     <!-- Grid thumbnail per kategori -->
     <div class="gallery-grid">
@@ -1408,33 +1423,7 @@ box-sizing: border-box;
             }, 3000);
         });
 
-        // Fungsi untuk membuka form pendaftaran Google Forms
-        function openRegistrationForm() {
-            // Ganti URL ini dengan Google Forms yang sudah Anda buat
-            const registrationURL = 'https://forms.gle/7mN9wqZNHwLdh6m7A';
-            
-            // Buka di tab/window baru
-            window.open(registrationURL, '_blank');
-            
-            // Optional: Tampilkan pesan info
-            alert('Form pendaftaran akan terbuka di tab baru. Silakan lengkapi data pendaftaran putra/putri Anda.');
-        }
-        
-        // Fungsi untuk konsultasi WhatsApp
-        function openWhatsAppConsultation() {
-            const waMessage = `*KONSULTASI PENDAFTARAN KB MELATI 1*%0A%0A` +
-                            `Halo, saya ingin berkonsultasi mengenai:%0A` +
-                            `□ Informasi pendaftaran%0A` +
-                            `□ Program pembelajaran%0A` +
-                            `□ Fasilitas sekolah%0A` +
-                            `□ Jadwal kunjungan%0A%0A` +
-                            `Mohon informasinya. Terima kasih! 🙏`;
-            
-            const waNumber = '6283895603395'; // Nomor WhatsApp sekolah
-            const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
-            window.open(waURL, '_blank');
-        }
-        function openGalleryModal(category) {
+            function openGalleryModal(category) {
             const modal = document.getElementById('galleryModal');
             const modalTitle = document.getElementById('modalTitle');
             const modalContent = document.getElementById('modalContent');
@@ -1585,10 +1574,3 @@ categoryData.items.forEach((item, index) => {
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
