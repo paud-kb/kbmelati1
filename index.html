@@ -1121,14 +1121,14 @@ box-sizing: border-box;
     </div>
 
     <!-- Tombol kategori (tanpa tombol "Semua") -->
-   <div class="gallery-categories">
-  <button onclick="openGallery('kegiatan')" class="category-btn">Kegiatan Belajar</button>
-  <button onclick="openGallery('fasilitas')" class="category-btn">Fasilitas Sekolah</button>
-  <button onclick="openGallery('prestasi')" class="category-btn">Prestasi Siswa</button>
-  <button onclick="openGallery('acara')" class="category-btn">Acara Wisuda</button>
-  <button onclick="openGallery('outdoor')" class="category-btn">Outdoor</button>
-  <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
-  </div>
+<div class="gallery-categories">
+<button class="category-btn" onclick="openGallery('kegiatan')">Kegiatan Belajar</button>
+<button class="category-btn" onclick="openGallery('fasilitas')">Fasilitas Sekolah</button>
+<button class="category-btn" onclick="openGallery('prestasi')">Prestasi Siswa</button>
+<button class="category-btn" onclick="openGallery('acara')">Acara Wisuda</button>
+<button class="category-btn" onclick="openGallery('outdoor')">Outdoor</button>
+<a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
+</div>
 
 	<!-- Heading TikTok -->
     <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="tiktok-heading">
@@ -1577,8 +1577,8 @@ categoryData.items.forEach((item, index) => {
 <div id="galleryModal" class="modal" style="display:none;">
   <div class="modal-content">
     <span class="close" onclick="closeGalleryModal()">&times;</span>
-    <h2 id="galleryTitle"></h2>
-    <div id="galleryItems" class="gallery-grid"></div>
+    <h2 id="modalTitle"></h2>
+    <div id="modalContent" class="gallery-grid"></div>
   </div>
 </div>
 
@@ -1586,3 +1586,4 @@ categoryData.items.forEach((item, index) => {
 <script src="script.js"></script>
 </body>
 </html>
+
