@@ -22,6 +22,7 @@ function openWhatsAppConsultation() {
     window.open(waURL, "_blank");
 }
 function openGallery(category) {
+  console.log(window.galleryData[category]);
   const modal = document.getElementById('galleryModal');
   const title = document.getElementById('galleryTitle');
   const itemsContainer = document.getElementById('galleryItems');
@@ -58,4 +59,5 @@ function openGallery(category) {
 function closeGalleryModal() {
   document.getElementById('galleryModal').style.display = 'none';
 }
+
 
