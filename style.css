@@ -90,7 +90,7 @@ footer {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1000; /* Pastikan modal berada di atas konten lainnya */
   left: 0;
   top: 0;
   width: 100%;
@@ -98,6 +98,7 @@ footer {
   overflow: auto;
   background: rgba(0,0,0,0.7);
 }
+
 .modal-content {
   background: #fff;
   margin: 50px auto;
@@ -131,5 +132,6 @@ footer {
 .gallery-item img:hover {
   transform: scale(1.05);
 }
+
 
 
