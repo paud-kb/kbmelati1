@@ -1144,58 +1144,32 @@ box-sizing: border-box;
     </blockquote>
     <script async src="https://www.tiktok.com/embed.js"></script>
 
-    <!-- Grid thumbnail per kategori (klik akan buka modal dinamis) -->
+<!-- Grid thumbnail per kategori (klik akan buka modal dinamis) -->
 <div class="gallery-grid">
-  <!-- Kegiatan Belajar -->
-  <a href="#" class="gallery-item" onclick="openGallery('kegiatan'); return false;">
+  <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('kegiatan')">
     <img src="images/gallery/kegiatan-belajar/kegiatan-1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
-    <div class="gallery-overlay">
-      <i class="fas fa-images"></i>
-      <h4>Kegiatan Belajar</h4>
-      <p>15 Foto • Lihat Semua</p>
-    </div>
+    <div class="gallery-overlay"><i class="fas fa-images"></i><h4>Kegiatan Belajar</h4><p>15 Foto • Lihat Semua</p></div>
   </a>
 
-  <!-- Fasilitas Sekolah -->
-  <a href="#" class="gallery-item" onclick="openGallery('fasilitas'); return false;">
+  <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('fasilitas')">
     <img src="images/gallery/fasilitas-sekolah/taman-bermain.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
-    <div class="gallery-overlay">
-      <i class="fas fa-building"></i>
-      <h4>Fasilitas Sekolah</h4>
-      <p>12 Foto • Lihat Semua</p>
-    </div>
+    <div class="gallery-overlay"><i class="fas fa-building"></i><h4>Fasilitas Sekolah</h4><p>12 Foto • Lihat Semua</p></div>
   </a>
 
-  <!-- Prestasi Siswa -->
-  <a href="#" class="gallery-item" onclick="openGallery('prestasi'); return false;">
+  <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('prestasi')">
     <img src="images/gallery/prestasi-siswa/piala.jpg" alt="Prestasi Siswa" class="gallery-thumb">
-    <div class="gallery-overlay">
-      <i class="fas fa-trophy"></i>
-      <h4>Prestasi Siswa</h4>
-      <p>8 Foto • Lihat Semua</p>
-    </div>
+    <div class="gallery-overlay"><i class="fas fa-trophy"></i><h4>Prestasi Siswa</h4><p>8 Foto • Lihat Semua</p></div>
   </a>
 
-  <!-- Acara Wisuda -->
-  <a href="#" class="gallery-item" onclick="openGallery('acara'); return false;">
+  <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('acara')">
     <img src="images/gallery/acara-wisuda/wisuda4.jpg" alt="Acara Wisuda" class="gallery-thumb">
-    <div class="gallery-overlay">
-      <i class="fas fa-calendar-star"></i>
-      <h4>Acara Wisuda</h4>
-      <p>10 Foto • Lihat Semua</p>
-    </div>
+    <div class="gallery-overlay"><i class="fas fa-calendar-star"></i><h4>Acara Wisuda</h4><p>10 Foto • Lihat Semua</p></div>
   </a>
 
-  <!-- Outdoor -->
-  <a href="#" class="gallery-item" onclick="openGallery('outdoor'); return false;">
+  <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('outdoor')">
     <img src="images/gallery/outdoor/sekolah-alam.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
-    <div class="gallery-overlay">
-      <i class="fas fa-tree"></i>
-      <h4>Kegiatan Outdoor</h4>
-      <p>9 Foto • Lihat Semua</p>
-    </div>
+    <div class="gallery-overlay"><i class="fas fa-tree"></i><h4>Kegiatan Outdoor</h4><p>9 Foto • Lihat Semua</p></div>
   </a>
-</div>
 </div>
 </section>
 
@@ -1483,15 +1457,15 @@ window.galleryData = {
 <div id="galleryModal" class="modal" style="display:none;">
   <div class="modal-content">
     <span class="close" onclick="closeGalleryModal()">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <div id="modalContent" class="gallery-grid"></div>
+    <h2 id="galleryTitle"></h2>
+    <div id="galleryItems" class="gallery-grid"></div>
   </div>
 </div>
-
 <!-- Panggil file script.js eksternal -->
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
