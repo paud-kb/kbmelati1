@@ -6,10 +6,12 @@
     <title>KB Melati 1 Purwaharja - PAUD Terbaik</title>
     <meta name="description" content="KB Melati 1 Purwaharja - Pendidikan Anak Usia Dini berkualitas dengan fasilitas lengkap dan metode pembelajaran terpadu">
     <meta name="keywords" content="PAUD, KB Melati, Pendidikan Anak, Purwaharja, Sekolah Anak">
-    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     
 <style>
 /* Judul TikTok Heading */
@@ -35,7 +37,7 @@
     width: 100%;
     display: block;
 }
-
+    
 {
 margin: 0;
 padding: 0;
@@ -88,7 +90,7 @@ box-sizing: border-box;
         .logo {
     width: 90px;
     height: 90px;
-    background: white;
+    background: rgb(238, 156, 156);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -110,20 +112,20 @@ box-sizing: border-box;
         }
         
         .school-name h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: -5px;
         }
         
         .school-name p {
-            font-size: 0.9rem;
-            opacity: 0.9;
+            font-size: 1.3rem;
+            opacity: 1.3;
         }
         
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .nav-menu a {
@@ -298,7 +300,7 @@ box-sizing: border-box;
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: #333;
+            color: #ffffff;
         }
         
         /* Academic Info */
@@ -409,7 +411,7 @@ box-sizing: border-box;
         
         .category-btn:hover,
         .category-btn.active {
-            background: #667eea;
+            background: #25d366;
             color: white;
         }
         
@@ -471,110 +473,14 @@ box-sizing: border-box;
         
         .gallery-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 40px #25d366;
         }
         
         .gallery-item:hover .gallery-overlay {
             opacity: 1;
         }
         
-        /* Gallery Modal */
-        .gallery-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.9);
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .modal-content {
-            background: white;
-            margin: 2% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 1000px;
-            height: 90%;
-            overflow: hidden;
-        }
-        
-        .modal-header {
-            padding: 1rem 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .modal-header h3 {
-            margin: 0;
-            font-size: 1.5rem;
-        }
-        
-        .close-modal {
-            font-size: 2rem;
-            cursor: pointer;
-            font-weight: bold;
-            transition: opacity 0.3s ease;
-        }
-        
-        .close-modal:hover {
-            opacity: 0.7;
-        }
-        
-        .modal-body {
-            padding: 2rem;
-            height: calc(100% - 80px);
-            overflow-y: auto;
-        }
-        
-        .modal-gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        
-        .modal-gallery-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-        
-        .modal-gallery-item:hover {
-            transform: scale(1.05);
-        }
-        
-        .modal-gallery-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        
-        .modal-gallery-item video {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-        
-        .video-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 10px;
-            border-radius: 50%;
-            font-size: 1.5rem;
-        }
-        
+             
         /* Contact Section */
         .contact-grid {
             display: grid;
@@ -638,8 +544,8 @@ box-sizing: border-box;
         
         /* Footer */
         .footer {
-            background: #333;
-            color: white;
+            background: #667eea;
+            color: rgb(255, 255, 255);
             padding: 3rem 0 1rem;
         }
         
@@ -654,11 +560,11 @@ box-sizing: border-box;
             font-size: 1.3rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            color: #667eea;
+            color: rgb(255, 255, 255);
         }
         
         .footer-section a {
-            color: #ccc;
+            color: rgb(255, 255, 255);
             text-decoration: none;
             display: block;
             margin-bottom: 0.5rem;
@@ -666,7 +572,7 @@ box-sizing: border-box;
         }
         
         .footer-section a:hover {
-            color: white;
+            color: #25d366;
         }
         
         .social-links {
@@ -681,14 +587,14 @@ box-sizing: border-box;
             justify-content: center;
             width: 40px;
             height: 40px;
-            background: #667eea;
+            background: #25d366;
             color: white;
             border-radius: 50%;
             transition: all 0.3s ease;
         }
         
         .social-links a:hover {
-            background: #764ba2;
+            background: white;
             transform: translateY(-2px);
         }
         
@@ -696,7 +602,7 @@ box-sizing: border-box;
             border-top: 1px solid #555;
             padding-top: 1rem;
             text-align: center;
-            color: #ccc;
+            color: rgb(0, 0, 0);
         }
         
         /* Animations */
@@ -723,7 +629,7 @@ box-sizing: border-box;
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 80px);
-                background: linear-gradient(135deg, #228B22 0%, #FFD700 50%, #228B22 100%);
+                background: linear-gradient(135deg, #228B22 0%, #25d366 50%, #205320 100%);
                 flex-direction: column;
                 align-items: center;
                 justify-content: flex-start;
@@ -815,10 +721,10 @@ box-sizing: border-box;
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 120px;
+            bottom: 100px;
             right: 20px;
             background: #25d366;
-            color: white;
+            color: rgb(255, 255, 255);
             width: 50px;
             height: 50px;
             border-radius: 40%;
@@ -834,7 +740,7 @@ box-sizing: border-box;
         }
         
         .whatsapp-float:hover {
-            background: #128c7e;
+            background: #866ce6;
             transform: scale(1.1);
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
         }
@@ -848,9 +754,9 @@ box-sizing: border-box;
         /* Additional styling for better UX */
         .scroll-to-top {
             position: fixed;
-            bottom: 60px;
+            bottom: 40px;
             right: 20px;
-            background: #667eea;
+            background: #25d366;
             color: white;
             width: 50px;
             height: 50px;
@@ -869,7 +775,7 @@ box-sizing: border-box;
         }
         
         .scroll-to-top:hover {
-            background: #764ba2;
+            background: #866ce6;
             transform: translateY(-2px);
         }
 	/* Responsif untuk kalender tahunan */
@@ -921,10 +827,11 @@ box-sizing: border-box;
     <section class="hero" id="beranda">
         <div class="container">
             <div class="hero-content">
-                <h2>Selamat Datang Di KB Melati 1 Purwaharja</h2>
+                <h2>Selamat Datang Di</h2>
+                <h3>KB Melati 1 Purwaharja</h3>
                 <p>Memberikan pendidikan terbaik untuk masa depan cemerlang putra-putri Anda</p>
                 <div class="cta-buttons">
-                    <a href="#" onclick="openRegistrationForm()" class="btn btn-primary">Daftar Sekarang</a>
+                    <a href="javascript:void(0)" onclick="openRegistrationForm()" class="btn btn-primary">Daftar Sekarang</a>
                     </div>
             </div>
         </div>
@@ -980,8 +887,8 @@ box-sizing: border-box;
                     <i class="fas fa-clock"></i>
                     <h3>Jadwal Pembelajaran</h3>
                     <p>Senin - Jumat: 07.30 - 11.00 WIB<br>
-                    Sabtu-Minggu : Les Calistung SD<br>
-                    Program Memantapan Calistung Bagi Siswa SD Kelas 3 - 6 tersedia</p>
+                    Sabtu-Minggu : Les Matematika SD<br>
+                    Program Memantapan Matematika Bagi Siswa SD Kelas 3 - 6 tersedia</p>
                 </div>
                 
                 <div class="academic-card">
@@ -990,14 +897,14 @@ box-sizing: border-box;
                     <p>• Senam pagi setiap hari Kamis<br>
                     • Cooking class setiap hari Selasa<br>
                     • Market day setiap hari Rabu<br>
-	 • Les Calistung SD Setiap Hari Sabtu dan Minggu</p>
+	                • Les Matematika SD Setiap Hari Sabtu dan Minggu</p>
                 </div>
                 
                 <div class="academic-card">
                     <i class="fas fa-bullhorn"></i>
                     <h3>Pendaftaran & Info Terbaru</h3>
                     <p>📢 Pendaftaran tahun ajaran baru 2025/2026 telah dibuka!<br>
-                    📅 Les Calistung SD setiap hari Sabtu dan Minggu<br>
+                    📅 Les Matematika SD setiap hari Sabtu dan Minggu<br>
                     📝 Daftar online via Google Forms<br>
                     💬 Konsultasi via WhatsApp</p>
                     <div style="margin-top: 1rem;">
@@ -1061,7 +968,8 @@ box-sizing: border-box;
             <h2>Kegiatan Sekolah</h2>
             <p>Berbagai aktivitas menarik yang mendukung perkembangan anak</p>
         </div>
-                <div class="news-grid">
+        
+        <div class="news-grid">
                 <div class="news-card">
                     <div class="news-image">
                         <i class="fas fa-graduation-cap"></i>
@@ -1076,7 +984,8 @@ box-sizing: border-box;
                     </ul>
                 </div>
             </div>
-                    <div class="news-card">
+            
+            <div class="news-card">
                     <div class="news-image">
                         <i class="fas fa-trophy"></i>
                     </div>
@@ -1109,6 +1018,7 @@ box-sizing: border-box;
     </div>
 </section>
 
+
 <!-- Gallery Section -->
 <section class="section" id="galeri" style="background-color: #f8f9ff;">
   <div class="container">
@@ -1116,84 +1026,102 @@ box-sizing: border-box;
       <h2>Galeri Foto & Video</h2>
       <p>Dokumentasi kegiatan dan fasilitas KB Melati 1 Purwaharja</p>
     </div>
-						<!-- Heading TikTok -->
+    <!-- Heading TikTok -->
     <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="tiktok-heading">
       Follow & tonton video kami di TikTok 📹
     </a>
 
-	  <!-- TikTok Embed -->
+	<!-- TikTok Embed -->
     <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kobermelati1" 
     data-unique-id="kobermelati1" data-embed-type="creator" style="max-width: 780px; min-width: 288px;">
-    <section>
     <a target="_blank" href="https://www.tiktok.com/@kobermelati1?refer=creator_embed">@kobermelati1</a>
-    </section>
     </blockquote>
-	<!-- <script async src="https://www.tiktok.com/embed.js"></script> -->
-    
-	  <!-- Tombol kategori galeri -->
-    <div class="gallery-categories">
-  <button onclick="openGallery('kegiatan-belajar')">Kegiatan Belajar</button>
-  <button onclick="openGallery('fasilitas-sekolah')">Fasilitas Sekolah</button>
-  <button onclick="openGallery('prestasi-siswa')">Prestasi Siswa</button>
-  <button onclick="openGallery('acara-wisuda')">Acara Wisuda</button>
-  <button onclick="openGallery('outdoor')">Kegiatan Outdoor</button>
-  <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">Video Pembelajaran</a>
-</div>
-</div>
+    <script async src="https://www.tiktok.com/embed.js"></script>
 </section>
-	
-<!-- Grid thumbnail per kategori (klik akan buka modal dinamis) -->
-<section id="gallery">
-  <div class="gallery-grid">
+
+<main>
+    <section>
+      <h2>Kategori Galeri</h2>
+      <!-- Tombol kategori -->
+      <div class="gallery-categories">
+        <a href="javascript:void(0)" class="category-btn" onclick="openGallery('kegiatan-belajar')">
+          <i class="fas fa-images"></i> Kegiatan Belajar
+        </a>
+        <a href="javascript:void(0)" class="category-btn" onclick="openGallery('fasilitas-sekolah')">
+          <i class="fas fa-building"></i> Fasilitas Sekolah
+        </a>
+        <a href="javascript:void(0)" class="category-btn" onclick="openGallery('prestasi-siswa')">
+          <i class="fas fa-trophy"></i> Prestasi Siswa
+        </a>
+        <a href="javascript:void(0)" class="category-btn" onclick="openGallery('acara-wisuda')">
+          <i class="fas fa-calendar"></i> Acara Wisuda
+        </a>
+        <a href="javascript:void(0)" class="category-btn" onclick="openGallery('outdoor')">
+          <i class="fas fa-tree"></i> Outdoor
+        </a>
+        <a href="https://www.tiktok.com/@kobermelati1" target="_blank" class="category-btn">
+          <i class="fas fa-video"></i> Video Pembelajaran
+        </a>
+      </div>
+    </section>
+  </main>
+
+<main>
+    <section>
+      <h2>Koleksi Foto</h2>
+      <div class="gallery">
     <!-- Kegiatan Belajar -->
-    <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('kegiatan')">
-      <img src="images/gallery/kegiatan-belajar/kegiatan-1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
-	  <div class="gallery-overlay">
-        <i class="fas fa-images"></i>
-        <h4>Kegiatan Belajar</h4>
-        <p>15 Foto • Lihat Semua</p>
-      </div>
-    </a>
-    <!-- Fasilitas Sekolah -->
-    <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('fasilitas')">
-      <img src="images/gallery/fasilitas-sekolah/taman-bermain.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
-      <div class="gallery-overlay">
-        <i class="fas fa-building"></i>
-        <h4>Fasilitas Sekolah</h4>
-        <p>12 Foto • Lihat Semua</p>
-      </div>
-    </a>
-    <!-- Prestasi Siswa -->
-    <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('prestasi')">
-      <img src="images/gallery/prestasi-siswa/piala.jpg" alt="Prestasi Siswa" class="gallery-thumb">
-      <div class="gallery-overlay">
-        <i class="fas fa-trophy"></i>
-        <h4>Prestasi Siswa</h4>
-        <p>8 Foto • Lihat Semua</p>
-      </div>
-    </a>
+  <a href="javascript:void(0)" onclick="openGallery('kegiatan-belajar')">
+  <img src="images/gallery/kegiatan-belajar/kegiatan-1.jpg" alt="Kegiatan Belajar" class="gallery-thumb">
+  <div class="gallery-overlay">
+    <i class="fas fa-images"></i>
+    <h4>Kegiatan Belajar</h4>
+    <p>15 Foto • Lihat Semua</p>
+  </div>
+</a>
 
-    <!-- Acara Khusus -->
-    <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('acara')">
-      <img src="images/gallery/acara-wisuda/wisuda4.jpg" alt="Acara Wisuda" class="gallery-thumb">
-      <div class="gallery-overlay">
-        <i class="fas fa-calendar"></i>
-        <h4>Acara Wisuda</h4>
-        <p>10 Foto • Lihat Semua</p>
-      </div>
-    </a>
+<!-- Fasilitas Sekolah -->
+<a href="javascript:void(0)" onclick="openGallery('fasilitas-sekolah')">
+  <img src="images/gallery/fasilitas-sekolah/taman-bermain.jpg" alt="Fasilitas Sekolah" class="gallery-thumb">
+  <div class="gallery-overlay">
+    <i class="fas fa-building"></i>
+    <h4>Fasilitas Sekolah</h4>
+    <p>12 Foto • Lihat Semua</p>
+  </div>
+</a>
 
-    <!-- Kegiatan Outdoor -->
-    <a href="javascript:void(0)" class="gallery-item" onclick="openGallery('outdoor')">
-      <img src="images/gallery/outdoor/sekolah-alam.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
-      <div class="gallery-overlay">
-        <i class="fas fa-tree"></i>
-        <h4>Kegiatan Outdoor</h4>
-        <p>9 Foto • Lihat Semua</p>
-      </div>
-    </a>
+<!-- Prestasi Siswa -->
+<a href="javascript:void(0)" onclick="openGallery('prestasi-siswa')">
+  <img src="images/gallery/prestasi-siswa/piala.jpg" alt="Prestasi Siswa" class="gallery-thumb">
+  <div class="gallery-overlay">
+    <i class="fas fa-trophy"></i>
+    <h4>Prestasi Siswa</h4>
+    <p>8 Foto • Lihat Semua</p>
+  </div>
+</a>
+
+<!-- Acara Wisuda -->
+<a href="javascript:void(0)" onclick="openGallery('acara-wisuda')">
+  <img src="images/gallery/acara-wisuda/wisuda4.jpg" alt="Acara Wisuda" class="gallery-thumb">
+  <div class="gallery-overlay">
+    <i class="fas fa-calendar"></i>
+    <h4>Acara Wisuda</h4>
+    <p>10 Foto • Lihat Semua</p>
+  </div>
+</a>
+
+<!-- Kegiatan Outdoor -->
+<a href="javascript:void(0)" onclick="openGallery('outdoor')">
+  <img src="images/gallery/outdoor/sekolah-alam.jpg" alt="Kegiatan Outdoor" class="gallery-thumb">
+  <div class="gallery-overlay">
+    <i class="fas fa-tree"></i>
+    <h4>Kegiatan Outdoor</h4>
+    <p>9 Foto • Lihat Semua</p>
+  </div>
+</a>
   </div>
 </section>
+<main>
 
     <!-- Contact Section -->
     <section class="section" id="kontak">
@@ -1235,7 +1163,7 @@ box-sizing: border-box;
                         <i class="fas fa-clock"></i>
                         <div>
                             <h4>Jam Operasional</h4>
-                            <p>Senin - Jumat: 07.00 - 11.00<br>Sabtu - Minggu Les Calistung SD : 07.00 - 15.00</p>
+                            <p>Senin - Jumat : 07.00 - 11.00 WIB "KBM PAUD"<br>Sabtu - Minggu : 07.00 - 15.00 WIB "Les Matematika SD"</p>
                         </div>
                     </div>
                 </div>
@@ -1299,11 +1227,11 @@ box-sizing: border-box;
                 
                 <div class="footer-section">
                     <h3>Program Sekolah</h3>
-                    <a href="#">Kelompok Bermain (2-3 tahun)</a>
-                    <a href="#">Kelompok Bermain A (4-5 tahun)</a>
-                    <a href="#">Kelompok Bermain B (5-6 tahun)</a>
-                    <a href="#">Les Calistung SD Kelas 3-6</a>
-                    <a href="#">Bimbingan Konseling</a>
+                    <a href="javascript:void(0)">Kelompok Bermain (2-3 tahun)</a>
+                    <a href="javascript:void(0)">Kelompok Bermain A (4-5 tahun)</a>
+                    <a href="javascript:void(0)">Kelompok Bermain B (5-6 tahun)</a>
+                    <a href="javascript:void(0)">Les Matematika SD Kelas 3-6</a>
+                    <a href="javascript:void(0)">Bimbingan Konseling</a>
                 </div>
                 </div>
                 <div class="footer-bottom">
@@ -1314,178 +1242,34 @@ box-sizing: border-box;
 
     <!-- WhatsApp Floating Button -->
     <div class="whatsapp-float" onclick="openWhatsAppConsultation()" title="Chat WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <i class="fab fa-whatsapp"></i>
     </div>
 
     <!-- Scroll to Top Button -->
     <button class="scroll-to-top" id="scrollToTop">
-        <i class="fas fa-arrow-up"></i>
+    <i class="fas fa-arrow-up"></i>
     </button>
 
-<!-- JavaScript untuk interaktivitas -->
-<script>
-// ===== mobile menu, header, scroll, form =====
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const header = document.getElementById('header');
-const scrollToTop = document.getElementById('scrollToTop');
-
-if (hamburger && navMenu) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-  });
-
-  document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-    });
-  });
-}
-
-window.addEventListener('scroll', () => {
-  if (!header || !scrollToTop) return;
-  if (window.scrollY > 100) {
-    header.classList.add('scrolled');
-    scrollToTop.classList.add('visible');
-  } else {
-    header.classList.remove('scrolled');
-    scrollToTop.classList.remove('visible');
-  }
-});
-
-if (scrollToTop) {
-  scrollToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target && header) {
-      const headerHeight = header.offsetHeight;
-      const elementPosition = target.offsetTop - headerHeight;
-      window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-    }
-  });
-});
-
-// Form submission ke WhatsApp Business
-const contactForm = document.querySelector('form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const submitBtn = this.querySelector('button[type="submit"]');
-    const originalText = submitBtn ? submitBtn.textContent : 'Kirim';
-    if (submitBtn) { submitBtn.textContent = 'Mengarahkan ke WhatsApp...'; submitBtn.disabled = true; }
-
-    const nama = this.nama ? this.nama.value : '';
-    const email = this.email ? this.email.value : '';
-    const telepon = this.telepon ? this.telepon.value : '';
-    const pesan = this.pesan ? this.pesan.value : '';
-
-    const waMessage = `*PESAN DARI WEBSITE KB MELATI 1*%0A%0A` +
-                    `👤 *Nama:* ${nama}%0A` +
-                    `📧 *Email:* ${email}%0A` +
-                    `📞 *Telepon:* ${telepon}%0A%0A` +
-                    `💬 *Pesan:*%0A${pesan}%0A%0A` +
-                    `_Pesan dikirim melalui website KB Melati 1 Purwaharja_`;
-
-    const waNumber = '6283895603395';
-    const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
-    window.open(waURL, '_blank');
-
-    setTimeout(() => {
-      if (contactForm) contactForm.reset();
-      if (submitBtn) { submitBtn.textContent = originalText; submitBtn.disabled = false; }
-      alert('Silakan kirim pesan melalui WhatsApp yang sudah terbuka. Terima kasih!');
-    }, 2500);
-  });
-}
-
-// fallback image generator
-function fallbackImage(caption) {
-  const safe = encodeURIComponent(caption);
-  return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'>
-    <rect fill='%23f0f0f0' width='300' height='200'/>
-    <text x='50%' y='50%' text-anchor='middle' fill='%23999' font-family='Arial' font-size='14'>
-        Foto: ${safe}
-    </text>
-  </svg>`;
-}
-
-// Close modal when clicking outside
-window.addEventListener('click', function(event) {
-  const modal = document.getElementById('galleryModal');
-  if (modal && event.target === modal) {
-    if (typeof closeGalleryModal === 'function') closeGalleryModal();
-  }
-});
-
-// --- gallery data global untuk dipakai oleh script.js ---
-window.galleryData = {
-  kegiatan: {
-    title: 'Kegiatan Belajar',
-    items: [
-      { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-1.jpg', caption: 'Belajar sambil bermain' },
-      { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-2.jpg', caption: 'Aktivitas kelompok' },
-      { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-3.jpg', caption: 'Pembelajaran interaktif' },
-      { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-4.jpg', caption: 'Kegiatan seni' },
-      { type: 'image', src: 'images/gallery/kegiatan-belajar/kegiatan-5.jpg', caption: 'Bermain edukatif' }
-    ]
-  },
-  fasilitas: {
-    title: 'Fasilitas Sekolah',
-    items: [
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/ruang-kelas.jpg', caption: 'Ruang kelas yang nyaman' },
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/taman-bermain.jpg', caption: 'Taman bermain outdoor' },
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/sekolah.jpg', caption: 'Perpustakaan mini' },
-      { type: 'image', src: 'images/gallery/fasilitas-sekolah/mainan-dalam.jpg', caption: 'Area makan' }
-    ]
-  },
-  prestasi: {
-    title: 'Prestasi Siswa',
-    items: [
-      { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-mewarnai.jpg', caption: 'Juara lomba mewarnai' },
-      { type: 'image', src: 'images/gallery/prestasi-siswa/lomba-tari.jpg', caption: 'Prestasi lomba tari' },
-      { type: 'image', src: 'images/gallery/prestasi-siswa/piala.jpg', caption: 'Sertifikat penghargaan' }
-    ]
-  },
-  acara: {
-    title: 'Acara Khusus',
-    items: [
-      { type: 'image', src: 'images/gallery/acara-wisuda/wisuda4.jpg', caption: 'Acara wisuda' },
-      { type: 'image', src: 'images/gallery/acara-wisuda/wisuda2.jpg', caption: 'Festival anak' },
-      { type: 'image', src: 'images/gallery/acara-wisuda/wisuda3.jpg', caption: 'Peringatan Hari Kartini' }
-    ]
-  },
-  outdoor: {
-    title: 'Kegiatan Outdoor',
-    items: [
-      { type: 'image', src: 'images/gallery/outdoor/sekolah-alam.jpg', caption: 'Sekolah alam' },
-      { type: 'image', src: 'images/gallery/outdoor/berkebun.jpg', caption: 'Belajar berkebun' },
-      { type: 'image', src: 'images/gallery/outdoor/field-trip.jpg', caption: 'Field trip edukatif' }
-    ]
-  }
-};
-</script>
-
-<!-- Modal Galeri -->
-<div id="galleryModal" class="modal">
+ <!-- Modal Gallery -->
+<div id="galleryModal">
   <div class="modal-content">
-    <span class="close" onclick="closeGalleryModal()">&times;</span>
-    <h2 id="galleryTitle"></h2>
-    <div id="galleryItems" class="gallery-grid"></div>
+    <div class="modal-header">
+      <h3 id="galleryTitle"></h3>
+      <button type="button" class="close" onclick="closeGalleryModal(event)">&times;</button>
+    </div>
+    <div id="galleryItems" class="modal-gallery-grid"></div>
   </div>
 </div>
 
-<!-- Panggil file script.js eksternal -->
-<script src="script.js"></script>
+<!-- Fullscreen Image Viewer -->
+<div id="imageViewer">
+  <span class="close" onclick="closeImageViewer()">&times;</span>
+  <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+  <img id="viewerImage" src="" alt="">
+  <div id="viewerCaption"></div>
+  <span class="next" onclick="changeImage(1)">&#10095;</span>
+</div>
+
+ <script src="script.js"></script>
 </body>
 </html>
-
-
