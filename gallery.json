@@ -1,10 +1,25 @@
 {
   "kegiatan-belajar": [
-    { "src": "images/gallery/kegiatan-belajar/kegiatan-1.jpg", "caption": "Kegiatan 1" },
-    { "src": "images/gallery/kegiatan-belajar/kegiatan-2.jpg", "caption": "Kegiatan 2" },
-    { "src": "images/gallery/kegiatan-belajar/kegiatan-3.jpg", "caption": "Kegiatan 3" },
-    { "src": "images/gallery/kegiatan-belajar/kegiatan-4.jpg", "caption": "Kegiatan 4" },
-    { "src": "images/gallery/kegiatan-belajar/kegiatan-5.jpg", "caption": "Kegiatan 5" }
+    {
+      "src": "https://drive.google.com/uc?export=view&id=1EqcYq6esCsFzOfglRv_IHCrDtAn_7Fky",
+      "caption": "Kegiatan 1"
+    },
+    {
+      "src": "https://drive.google.com/uc?export=view&id=1z9kVV7XiDo3V1Y8DwaLmPvSUDfpETyI1",
+      "caption": "Kegiatan 2"
+    },
+    {
+      "src": "https://drive.google.com/uc?export=view&id=1-WpLSr6FCvE-yMrQp_czE-8vSmriuhlN",
+      "caption": "Kegiatan 3"
+    },
+    {
+      "src": "https://drive.google.com/uc?export=view&id=1NI3OEFm_k2OiQ-u4xx6yuARPskxAa7LU",
+      "caption": "Kegiatan 4"
+    },
+    {
+      "src": "https://drive.google.com/uc?export=view&id=1QI9Z_4kKLyBRPSY3LmUXk3nQa4XIuvq-",
+      "caption": "Kegiatan 5"
+    }
   ],
 
   "fasilitas-sekolah": [
@@ -36,3 +51,4 @@
     { "src": "images/gallery/outdoor/sekolah-alam.jpg", "caption": "Sekolah Alam" }
   ]
 }
+
