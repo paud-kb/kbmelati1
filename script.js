@@ -2,59 +2,19 @@
   'use strict';
 
   // =======================
-  // Data galeri (lengkap sesuai folder)
+  // Load Gallery Data dari JSON
   // =======================
-  const galleryData = {
-    "kegiatan-belajar": {
-      title: "Kegiatan Belajar",
-      items: [
-        { src: "images/gallery/kegiatan-belajar/kegiatan-1.jpg", caption: "Kegiatan 1" },
-        { src: "images/gallery/kegiatan-belajar/kegiatan-2.jpg", caption: "Kegiatan 2" },
-        { src: "images/gallery/kegiatan-belajar/kegiatan-3.jpg", caption: "Kegiatan 3" },
-        { src: "images/gallery/kegiatan-belajar/kegiatan-4.jpg", caption: "Kegiatan 4" },
-        { src: "images/gallery/kegiatan-belajar/kegiatan-5.jpg", caption: "Kegiatan 5" }
-      ]
-    },
+  let galleryData = {};
 
-    "fasilitas-sekolah": {
-      title: "Fasilitas Sekolah",
-      items: [
-        { src: "images/gallery/fasilitas-sekolah/mainan-dalam.jpg", caption: "Mainan Dalam" },
-        { src: "images/gallery/fasilitas-sekolah/perpustakaan.jpg", caption: "Perpustakaan" },
-        { src: "images/gallery/fasilitas-sekolah/ruang-kelas.jpg", caption: "Ruang Kelas" },
-        { src: "images/gallery/fasilitas-sekolah/sekolah.jpg", caption: "Sekolah" },
-        { src: "images/gallery/fasilitas-sekolah/taman-bermain.jpg", caption: "Taman Bermain" }
-      ]
-    },
-
-    "acara-wisuda": {
-      title: "Acara Wisuda",
-      items: [
-        { src: "images/gallery/acara-wisuda/wisuda.jpg", caption: "Wisuda 1" },
-        { src: "images/gallery/acara-wisuda/wisuda2.jpg", caption: "Wisuda 2" },
-        { src: "images/gallery/acara-wisuda/wisuda3.jpg", caption: "Wisuda 3" },
-        { src: "images/gallery/acara-wisuda/wisuda4.jpg", caption: "Wisuda 4" }
-      ]
-    },
-
-    "outdoor": {
-      title: "Outdoor",
-      items: [
-        { src: "images/gallery/outdoor/berkebun.jpg", caption: "Berkebun" },
-        { src: "images/gallery/outdoor/field-trip.jpg", caption: "Field Trip" },
-        { src: "images/gallery/outdoor/sekolah-alam.jpg", caption: "Sekolah Alam" }
-      ]
-    },
-
-    "prestasi-siswa": {
-      title: "Prestasi Siswa",
-      items: [
-        { src: "images/gallery/prestasi-siswa/lomba-mewarnai.jpg", caption: "Lomba Mewarnai" },
-        { src: "images/gallery/prestasi-siswa/lomba-tari.jpg", caption: "Lomba Tari" },
-        { src: "images/gallery/prestasi-siswa/piala.jpg", caption: "Piala" }
-      ]
-    }
-  };
+  fetch("gallery.json")
+    .then(response => response.json())
+    .then(data => {
+      galleryData = data;
+      console.log("Gallery loaded:", galleryData);
+    })
+    .catch(error => {
+      console.error("Gagal load gallery.json:", error);
+    });
 
   // =======================
   // Helper fallback image
@@ -73,17 +33,20 @@
   // Modal Galeri
   // =======================
   window.openGallery = function (category) {
-    const data = galleryData[category];
-    if (!data) return;
+    if (!galleryData[category]) {
+      alert("Galeri belum tersedia atau gagal dimuat.");
+      return;
+    }
 
+    const data = galleryData[category];
     const modal = document.getElementById('galleryModal');
     const title = document.getElementById('galleryTitle');
     const itemsContainer = document.getElementById('galleryItems');
 
-    if (title) title.textContent = data.title || '';
+    if (title) title.textContent = data.title || category.replace("-", " ").toUpperCase();
     if (itemsContainer) itemsContainer.innerHTML = '';
 
-    data.items.forEach((item, index) => {
+    data.forEach((item, index) => {
       const div = document.createElement('div');
       div.classList.add('modal-gallery-item');
       const img = document.createElement('img');
@@ -95,7 +58,7 @@
         this.src = fallbackImage(item.caption || 'Foto');
       };
       img.addEventListener('click', () => {
-        window._galleryItems = data.items;
+        window._galleryItems = data;
         window._galleryIndex = index;
         openImageViewer(item.src, item.caption);
       });
@@ -107,14 +70,12 @@
     document.body.style.overflow = 'hidden';
   };
 
-window.closeGalleryModal = function (event) {
-  if (event) event.preventDefault(); // cegah aksi default
-  console.log("Close modal clicked"); // cek di console
-  const modal = document.getElementById('galleryModal');
-  if (modal) modal.classList.remove('open');
-  document.body.style.overflow = '';
-};
-
+  window.closeGalleryModal = function (event) {
+    if (event) event.preventDefault();
+    const modal = document.getElementById('galleryModal');
+    if (modal) modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
 
   // Klik di luar area modal untuk menutup
   window.addEventListener('click', e => {
