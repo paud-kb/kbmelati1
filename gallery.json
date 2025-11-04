@@ -28,6 +28,8 @@
   ],
 
   "outdoor": [
+    { "src": "images/gallery/outdoor/berkebun.jpg", "caption": "Periksakesehatan2" },
+    { "src": "images/gallery/outdoor/berkebun.jpg", "caption": "Periksakesehatan" },
     { "src": "images/gallery/outdoor/berkebun.jpg", "caption": "Berkebun" },
     { "src": "images/gallery/outdoor/outdoor1.jpg", "caption": "Taman Bermain" },
     { "src": "images/gallery/outdoor/outdoor2.jpg", "caption": "Taman Bermain" },
@@ -35,5 +37,6 @@
     { "src": "images/gallery/outdoor/sekolah-alam.jpg", "caption": "Sekolah Alam" }
   ]
 }
+
 
 
