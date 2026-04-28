@@ -1,0 +1,22 @@
+{
+  "name": "KOBER Melati 1 Purwaharja",
+  "short_name": "KB Melati 1",
+  "description": "Pendidikan Anak Usia Dini berkualitas, Ceria, dan Berakhlak Mulia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFAF0", /* Krem sangat muda */
+  "theme_color": "#4FC3F7", /* Biru Langit */
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "public/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "public/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
