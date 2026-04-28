@@ -1,230 +1,196 @@
-(function () {
-  'use strict';
+// Toggle Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 
-  // =======================
-  // Load Gallery Data dari JSON
-  // =======================
-  let galleryData = {};
 
-  fetch("gallery.json")
-    .then(response => response.json())
-    .then(data => {
-      galleryData = data;
-      console.log("Gallery loaded:", galleryData);
-    })
-    .catch(error => {
-      console.error("Gagal load gallery.json:", error);
-    });
-
-  // =======================
-  // Helper fallback image
-  // =======================
-  function fallbackImage(caption) {
-    const safe = encodeURIComponent(caption || 'Foto');
-    return `data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'>
-      <rect fill='%23f0f0f0' width='300' height='200'/>
-      <text x='50%' y='50%' text-anchor='middle' fill='%23999' font-family='Arial' font-size='14'>
-          ${safe}
-      </text>
-    </svg>`;
-  }
-
-  // =======================
-  // Modal Galeri
-  // =======================
-  window.openGallery = function (category) {
-    if (!galleryData[category]) {
-      alert("Galeri belum tersedia atau gagal dimuat.");
-      return;
-    }
-
-    const data = galleryData[category];
-    const modal = document.getElementById('galleryModal');
-    const title = document.getElementById('galleryTitle');
-    const itemsContainer = document.getElementById('galleryItems');
-
-    if (title) title.textContent = data.title || category.replace("-", " ").toUpperCase();
-    if (itemsContainer) itemsContainer.innerHTML = '';
-
-    data.forEach((item, index) => {
-      const div = document.createElement('div');
-      div.classList.add('modal-gallery-item');
-      const img = document.createElement('img');
-      img.src = item.src;
-      img.alt = item.caption || '';
-      img.title = item.caption || '';
-      img.onerror = function () {
-        this.onerror = null;
-        this.src = fallbackImage(item.caption || 'Foto');
-      };
-      img.addEventListener('click', () => {
-        window._galleryItems = data;
-        window._galleryIndex = index;
-        openImageViewer(item.src, item.caption);
-      });
-      div.appendChild(img);
-      if (itemsContainer) itemsContainer.appendChild(div);
-    });
-
-    if (modal) modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  };
-
-  window.closeGalleryModal = function (event) {
-    if (event) event.preventDefault();
-    const modal = document.getElementById('galleryModal');
-    if (modal) modal.classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  // Klik di luar area modal untuk menutup
-  window.addEventListener('click', e => {
-    const modal = document.getElementById('galleryModal');
-    if (modal && e.target === modal) window.closeGalleryModal();
-  });
-
-  // Escape untuk menutup modal
-  window.addEventListener('keydown', e => {
-    if (e.key === 'Escape') window.closeGalleryModal();
-  });
-
-  // =======================
-  // Tombol daftar & WA
-  // =======================
-  window.openRegistrationForm = function () {
-    window.open("https://forms.gle/7mN9wqZNHwLdh6m7A", "_blank");
-  };
-
-  window.openWhatsAppConsultation = function () {
-    const waNumber = "6283895603395";
-    const waMessage = `*KONSULTASI PENDAFTARAN KB MELATI 1*%0A%0A` +
-      `Halo, saya ingin berkonsultasi mengenai:%0A` +
-      `□ Informasi pendaftaran%0A` +
-      `□ Program pembelajaran%0A` +
-      `□ Biaya sekolah%0A` +
-      `□ Fasilitas sekolah%0A` +
-      `□ Jadwal kunjungan%0A%0A` +
-      `Mohon informasinya. Terima kasih! 🙏`;
-    const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
-    window.open(waURL, "_blank");
-  };
-
-  // =======================
-  // Menu & Scroll
-  // =======================
-  const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-  const header = document.getElementById('header');
-  const scrollToTop = document.getElementById('scrollToTop');
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navMenu.classList.toggle('active');
-    });
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
-    });
-  }
-
-  window.addEventListener('scroll', () => {
-    if (!header || !scrollToTop) return;
-    if (window.scrollY > 100) {
-      header.classList.add('scrolled');
-      scrollToTop.classList.add('visible');
-    } else {
-      header.classList.remove('scrolled');
-      scrollToTop.classList.remove('visible');
-    }
-  });
-
-  if (scrollToTop) {
-    scrollToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const href = anchor.getAttribute('href');
-      if (!href || href === '#' || href === '#0') return;
-      let target = null;
-      try { target = document.querySelector(href); } catch (err) { return; }
-      if (target && header) {
-        e.preventDefault();
-        const headerHeight = header.offsetHeight;
-        const elementPosition = target.offsetTop - headerHeight;
-        window.scrollTo({ top: elementPosition, behavior: 'smooth' });
-      }
-    });
-  });
-
-  // Form WA
-  const contactForm = document.querySelector('form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', e => {
-      e.preventDefault();
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn ? submitBtn.textContent : 'Kirim';
-      if (submitBtn) { submitBtn.textContent = 'Mengarahkan ke WhatsApp...'; submitBtn.disabled = true; }
-
-      const nama = contactForm.nama ? contactForm.nama.value : '';
-      const email = contactForm.email ? contactForm.email.value : '';
-      const telepon = contactForm.telepon ? contactForm.telepon.value : '';
-      const pesan = contactForm.pesan ? contactForm.pesan.value : '';
-
-      const waMessage = `*PESAN DARI WEBSITE KB MELATI 1*%0A%0A` +
-        `👤 *Nama:* ${nama}%0A` +
-        `📧 *Email:* ${email}%0A` +
-        `📞 *Telepon:* ${telepon}%0A%0A` +
-        `💬 *Pesan:*%0A${pesan}%0A%0A` +
-        `_Pesan dikirim melalui website KB Melati 1 Purwaharja_`;
-
-      const waNumber = '6283895603395';
-      const waURL = `https://wa.me/${waNumber}?text=${waMessage}`;
-      window.open(waURL, '_blank');
-
-      setTimeout(() => {
-        contactForm.reset();
-        if (submitBtn) { submitBtn.textContent = originalText; submitBtn.disabled = false; }
-        alert('Silakan kirim pesan melalui WhatsApp yang sudah terbuka. Terima kasih!');
-      }, 2500);
-    });
-  }
-
-  window._galleryFallbackImage = fallbackImage;
-})();
-
-// =======================
-// Fullscreen Viewer
-// =======================
-function openImageViewer(src, caption) {
-  const viewer = document.getElementById('imageViewer');
-  const img = document.getElementById('viewerImage');
-  const cap = document.getElementById('viewerCaption');
-  if (img) img.src = src;
-  if (cap) cap.textContent = caption || '';
-  if (viewer) viewer.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeImageViewer() {
-  const viewer = document.getElementById('imageViewer');
-  if (viewer) viewer.classList.remove('open');
-  document.body.style.overflow = '';
-}
-
-function changeImage(step) {
-  if (!window._galleryItems || !window._galleryItems.length) return;
-  window._galleryIndex = (window._galleryIndex + step + window._galleryItems.length) % window._galleryItems.length;
-  const item = window._galleryItems[window._galleryIndex];
-  if (item) openImageViewer(item.src, item.caption);
-}
-
-document.querySelectorAll('a[href="#"]').forEach(a => {
-  a.addEventListener('click', e => e.preventDefault());
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 });
+
+// Close menu when link clicked
+document.querySelectorAll('.nav-menu a').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
+
+// Sticky Header Effect
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.style.padding = '0.5rem 0';
+        header.style.boxShadow = '0 4px 20px rgba(79, 195, 247, 0.3)';
+    } else {
+        header.style.padding = '1rem 0';
+        header.style.boxShadow = '0 4px 20px rgba(79, 195, 247, 0.15)';
+    }
+});
+
+// Gallery Filter Logic (Client Side)
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // 1. Hapus class active dari semua tombol
+        filterBtns.forEach(b => b.classList.remove('active'));
+        // 2. Tambah class active ke tombol yang diklik
+        btn.classList.add('active');
+        
+        // 3. Ambil value filter (misal: 'wisuda', 'outdoor')
+        const filterValue = btn.getAttribute('data-filter');
+        
+        // 4. Loop semua foto
+        galleryItems.forEach(item => {
+            if (filterValue === 'semua' || item.getAttribute('data-category') === filterValue) {
+                // Tampilkan jika sesuai
+                item.style.display = 'block';
+                // Tambahkan animasi muncul sedikit
+                setTimeout(() => item.style.opacity = '1', 50);
+            } else {
+                // Sembunyikan jika tidak sesuai
+                item.style.display = 'none';
+                item.style.opacity = '0';
+            }
+        });
+    });
+});
+
+// WA Form Handler (Direct Link Only)
+document.getElementById('waForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const inputs = this.querySelectorAll('input, textarea');
+    const nama = inputs[0].value;
+    const noWa = inputs[1].value;
+    const pesan = inputs[2].value;
+    
+    const text = `Halo Admin KB Melati, saya ${nama}.%0A%0APesan: ${pesan}`;
+    const url = `https://wa.me/${noWa}?text=${text}`;
+    
+    window.open(url, '_blank');
+});
+
+// --- KALENDER DIGITAL LOGIC ---
+
+// DATA JADWAL AKADEMIK (Dummy Data 2025/2026)
+// Format: "YYYY-MM": [ { day: Tanggal, title: "Judul Kegiatan" } ]
+const academicEvents = {
+    "2025-07": [
+        { day: 15, title: "Masa Pengenalan Lingkungan Sekolah (MPLS)" },
+        { day: 20, title: "Pengukuran Tinggi & Berat Badan" }
+    ],
+    "2025-08": [
+        { day: 17, title: "Peringatan HUT RI Ke-80" },
+        { day: 25, title: "Market Day Bulan Agustus" }
+    ],
+    "2025-09": [
+        { day: 10, title: "Lomba Mewarnai Tingkat Kelas" },
+        { day: 25, title: "Pemeriksaan Kesehatan Rutin" }
+    ],
+    "2025-12": [
+        { day: 20, title: "Kegiatan Natal & Akhir Tahun" }
+    ],
+    "2026-01": [
+        { day: 5, title: "Awal Masuk Semester Genap" },
+        { day: 15, title: "Field Trip ke Kebun Binatang" }
+    ],
+    "2026-06": [
+        { day: 20, title: "Wisuda & Kenaikan Kelas" }
+    ]
+};
+
+// State Kalender
+let currentMonth = new Date().getMonth();
+let currentYear = new Date().getFullYear();
+
+const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
+const monthDisplay = document.getElementById('monthYearDisplay');
+const calendarDays = document.getElementById('calendarDays');
+const eventsList = document.getElementById('eventsList');
+
+// Fungsi Render Kalender
+function renderCalendar(month, year) {
+    // Update Judul Bulan
+    monthDisplay.innerText = `${monthNames[month]} ${year}`;
+    
+    // Bersihkan Grid
+    calendarDays.innerHTML = "";
+    
+    // Hitung Tanggal
+    const firstDay = new Date(year, month, 1).getDay(); // Hari apa tanggal 1
+    const daysInMonth = new Date(year, month + 1, 0).getDate(); // Total hari bulan ini
+    
+    // Padding Kosong di Awal Bulan
+    for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement('div');
+        emptyCell.classList.add('day-cell', 'empty');
+        calendarDays.appendChild(emptyCell);
+    }
+    
+    // Render Tanggal
+    const keyMonth = `${year}-${String(month + 1).padStart(2, '0')}`; // Format "2025-07"
+    const eventsThisMonth = academicEvents[keyMonth] || [];
+    
+    // Reset List Kegiatan
+    eventsList.innerHTML = "";
+
+    if (eventsThisMonth.length === 0) {
+        eventsList.innerHTML = "<p class='no-events'>Tidak ada kegiatan khusus bulan ini.</p>";
+    } else {
+        // Render Kegiatan ke Panel Samping
+        eventsThisMonth.forEach(evt => {
+            const item = document.createElement('div');
+            item.classList.add('event-item');
+            item.innerHTML = `
+                <div class="event-date-badge">${evt.day}</div>
+                <div class="event-desc">${evt.title}</div>
+            `;
+            eventsList.appendChild(item);
+        });
+    }
+
+    // Render Angka Tanggal di Grid
+    for (let i = 1; i <= daysInMonth; i++) {
+        const dayCell = document.createElement('div');
+        dayCell.classList.add('day-cell');
+        dayCell.innerText = i;
+        
+        // Cek apakah hari ini (realtime)
+        const today = new Date();
+        if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+            dayCell.classList.add('today');
+        }
+        
+        // Cek apakah ada kegiatan di tanggal ini
+        const hasEvent = eventsThisMonth.some(e => e.day === i);
+        if (hasEvent) {
+            dayCell.classList.add('has-event');
+        }
+        
+        calendarDays.appendChild(dayCell);
+    }
+}
+
+// Event Listener Navigasi
+document.getElementById('prevMonth').addEventListener('click', () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    renderCalendar(currentMonth, currentYear);
+});
+
+document.getElementById('nextMonth').addEventListener('click', () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    renderCalendar(currentMonth, currentYear);
+});
+
+// Render awal saat load
+renderCalendar(currentMonth, currentYear);
